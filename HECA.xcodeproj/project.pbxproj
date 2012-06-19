@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		739C4E2615907113008D91FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739C4E2515907113008D91FB /* UIKit.framework */; };
+		739C4E2815907113008D91FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739C4E2715907113008D91FB /* Foundation.framework */; };
+		739C4E2A15907113008D91FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739C4E2915907113008D91FB /* CoreGraphics.framework */; };
+		739C4E3015907113008D91FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 739C4E2E15907113008D91FB /* InfoPlist.strings */; };
+		739C4E3215907113008D91FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 739C4E3115907113008D91FB /* main.m */; };
+		739C4E3615907113008D91FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 739C4E3515907113008D91FB /* AppDelegate.m */; };
+		739C4E3915907114008D91FB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739C4E3715907114008D91FB /* MainStoryboard.storyboard */; };
+		739C4E3C15907114008D91FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 739C4E3B15907114008D91FB /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		739C4E2115907113008D91FB /* HECA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HECA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		739C4E2515907113008D91FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		739C4E2715907113008D91FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		739C4E2915907113008D91FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		739C4E2D15907113008D91FB /* HECA-Info.plist */ = {isa = PBXFileReference; path = "HECA-Info.plist"; sourceTree = "<group>"; };
+		739C4E2F15907113008D91FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		739C4E3115907113008D91FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		739C4E3315907113008D91FB /* HECA-Prefix.pch */ = {isa = PBXFileReference; path = "HECA-Prefix.pch"; sourceTree = "<group>"; };
+		739C4E3415907113008D91FB /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		739C4E3515907113008D91FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		739C4E3815907114008D91FB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		739C4E3A15907114008D91FB /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		739C4E3B15907114008D91FB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		739C4E1E15907113008D91FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				739C4E2615907113008D91FB /* UIKit.framework in Frameworks */,
+				739C4E2815907113008D91FB /* Foundation.framework in Frameworks */,
+				739C4E2A15907113008D91FB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		739C4E1615907111008D91FB = {
+			isa = PBXGroup;
+			children = (
+				739C4E2B15907113008D91FB /* HECA */,
+				739C4E2415907113008D91FB /* Frameworks */,
+				739C4E2215907113008D91FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		739C4E2215907113008D91FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				739C4E2115907113008D91FB /* HECA.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		739C4E2415907113008D91FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				739C4E2515907113008D91FB /* UIKit.framework */,
+				739C4E2715907113008D91FB /* Foundation.framework */,
+				739C4E2915907113008D91FB /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		739C4E2B15907113008D91FB /* HECA */ = {
+			isa = PBXGroup;
+			children = (
+				739C4E3415907113008D91FB /* AppDelegate.h */,
+				739C4E3515907113008D91FB /* AppDelegate.m */,
+				739C4E3715907114008D91FB /* MainStoryboard.storyboard */,
+				739C4E3A15907114008D91FB /* ViewController.h */,
+				739C4E3B15907114008D91FB /* ViewController.m */,
+				739C4E2C15907113008D91FB /* Supporting Files */,
+			);
+			path = HECA;
+			sourceTree = "<group>";
+		};
+		739C4E2C15907113008D91FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				739C4E2D15907113008D91FB /* HECA-Info.plist */,
+				739C4E2E15907113008D91FB /* InfoPlist.strings */,
+				739C4E3115907113008D91FB /* main.m */,
+				739C4E3315907113008D91FB /* HECA-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		739C4E2015907113008D91FB /* HECA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 739C4E3F15907114008D91FB /* Build configuration list for PBXNativeTarget "HECA" */;
+			buildPhases = (
+				739C4E1D15907113008D91FB /* Sources */,
+				739C4E1E15907113008D91FB /* Frameworks */,
+				739C4E1F15907113008D91FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HECA;
+			productName = HECA;
+			productReference = 739C4E2115907113008D91FB /* HECA.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		739C4E1815907111008D91FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = Freelance;
+			};
+			buildConfigurationList = 739C4E1B15907111008D91FB /* Build configuration list for PBXProject "HECA" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 739C4E1615907111008D91FB;
+			productRefGroup = 739C4E2215907113008D91FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				739C4E2015907113008D91FB /* HECA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		739C4E1F15907113008D91FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				739C4E3015907113008D91FB /* InfoPlist.strings in Resources */,
+				739C4E3915907114008D91FB /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		739C4E1D15907113008D91FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				739C4E3215907113008D91FB /* main.m in Sources */,
+				739C4E3615907113008D91FB /* AppDelegate.m in Sources */,
+				739C4E3C15907114008D91FB /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		739C4E2E15907113008D91FB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				739C4E2F15907113008D91FB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		739C4E3715907114008D91FB /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				739C4E3815907114008D91FB /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		739C4E3D15907114008D91FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		739C4E3E15907114008D91FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		739C4E4015907114008D91FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HECA/HECA-Prefix.pch";
+				INFOPLIST_FILE = "HECA/HECA-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		739C4E4115907114008D91FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HECA/HECA-Prefix.pch";
+				INFOPLIST_FILE = "HECA/HECA-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		739C4E1B15907111008D91FB /* Build configuration list for PBXProject "HECA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				739C4E3D15907114008D91FB /* Debug */,
+				739C4E3E15907114008D91FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		739C4E3F15907114008D91FB /* Build configuration list for PBXNativeTarget "HECA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				739C4E4015907114008D91FB /* Debug */,
+				739C4E4115907114008D91FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 739C4E1815907111008D91FB /* Project object */;
+}
