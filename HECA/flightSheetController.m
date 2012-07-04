@@ -9,7 +9,6 @@
 #import "flightSheetController.h"
 #import "flightSheet.h"
 
-
 @interface flightSheetController ()
 
 @end
@@ -17,11 +16,43 @@
 @implementation flightSheetController
 
 @synthesize dumyData = _dumyData;
+@synthesize workingIndicator = _workingIndicator;
+@synthesize arrival = _arrival;
 
+#pragma mark - GDC
 
-#pragma mark - UITableViewDataSource
+dispatch_queue_t arrivalQ;
 
+- (void) getCAIArrivalsDataFromJSONAsync
+{
+    NSURL *arrivalsJSONURL = [NSURL URLWithString:@"http://apis.chehab.me/HECA/?json=1&arrival=1"];    
+    
+    NSData *arrivalsJSONData = [[[NSString alloc] initWithContentsOfURL:arrivalsJSONURL] dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *e = nil;
+    
+    self.arrival = [NSJSONSerialization JSONObjectWithData:arrivalsJSONData options:NSJSONReadingMutableContainers error:&e];
+    
+    NSLog(@"JSON Serialization Completed");
+    
+    dispatch_async(dispatch_get_main_queue(), 
+                   ^{ self.workingIndicator.hidden = YES; });
+}
 
+- (void) getCAIArrivalsDataFromJSON
+{
+    NSURL *arrivalsJSONURL = [NSURL URLWithString:@"http://apis.chehab.me/HECA/?json=1&arrival=1"];    
+    
+    NSData *arrivalsJSONData = [[[NSString alloc] initWithContentsOfURL:arrivalsJSONURL] dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *e = nil;
+    
+    self.arrival = [NSJSONSerialization JSONObjectWithData:arrivalsJSONData options:NSJSONReadingMutableContainers error:&e];
+    
+    NSLog(@"%@", self.arrival);
+    
+    NSLog(@"JSON Serialization Completed");
+    
+    self.workingIndicator.hidden = YES;
+}
 
 
 #pragma mark -
@@ -46,6 +77,12 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    self.workingIndicator.hidden = NO;
+    
+//    arrivalQ = dispatch_queue_create("me.chehab.apps.heca", NULL);
+//    dispatch_async(arrivalQ, ^{ [self getCAIArrivalsDataFromJSONAsync]; });
+    [self getCAIArrivalsDataFromJSON];
+    
     self.dumyData = [[NSArray alloc] initWithObjects:@"Chehab",
                      @"Mostafa",@"Hilmy",@"Abd El-Karim",
                      @"Abu Tariq",@"Batul",@"Zainab", nil];
@@ -53,6 +90,7 @@
 
 - (void)viewDidUnload
 {
+    [self setWorkingIndicator:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -62,6 +100,8 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+
 
 #pragma mark - Table view data source
 
@@ -73,16 +113,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"$> tableView:numberOfRowsInSection:");
-    return [self.dumyData count];
+//    return [self.dumyData count];
+    return [[self.arrival objectForKey:@"Arrival"] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"flightSheetCell";
-    
-    NSLog(@"$> tableView:cellForRowAtIndexPath:");
-    
+    NSString *CellIdentifier = @"flightSheetCell";
+        
     flightSheet *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
@@ -90,10 +128,59 @@
                 initWithStyle:UITableViewCellStyleDefault 
                 reuseIdentifier:CellIdentifier];
     }
-    
+
+    NSMutableDictionary *fl = [[self.arrival objectForKey:@"Arrival"] objectAtIndex:[indexPath row]];
     // Configure the cell...
-    cell.airline.text = [self.dumyData objectAtIndex: [indexPath row]];
+    if (![[fl objectForKey:@"airline"] isEqualToString:@""] ) {
+        cell.airline.text = [fl objectForKey:@"airline"];
+    }
+    else {
+        cell.airline.text = @"N/A";
+    }
     
+    if (![[fl objectForKey:@"flightno"] isEqualToString:@""] ) {
+        cell.flightNumber.text = [fl objectForKey:@"flightno"];
+    }
+    else {
+        cell.flightNumber.text = @"N/A";
+    }
+    
+    if (![[fl objectForKey:@"airport"] isEqualToString:@""] ) {
+        cell.cityCountry.text = [fl objectForKey:@"airport"];
+    }
+    else {
+        cell.cityCountry.text = @"N/A";
+    }
+        
+    if (![[fl objectForKey:@"status"] isEqualToString:@""]) {
+        cell.flightStatus.text = [fl objectForKey:@"status"];
+        NSLog(@"$> flightStatus = %@",[fl objectForKey:@"status"]);
+    }
+    else {
+        cell.flightStatus.text = @"N/A";
+        NSLog(@"$> flightStatus N/A");
+    }
+    
+    if (![[fl objectForKey:@"terminal"] isEqualToString:@""] ) {
+        cell.terminalGate.text = [fl objectForKey:@"terminal"];
+    }
+    else {
+        cell.terminalGate.text = @"N/A";
+    }
+    
+    if (![[fl objectForKey:@"eta"] isEqualToString:@""] ) {
+        cell.clock.text = [fl objectForKey:@"eta"];
+        cell.clockMode.text = @"ETA";
+    }
+    else if (![[fl objectForKey:@"sch"] isEqualToString:@""] ) {
+        cell.clock.text = [fl objectForKey:@"sch"];
+        cell.clockMode.text = @"Schedualed";
+    }
+    else {
+        cell.clock.text = @"--:--";
+        cell.clockMode.text = @"N/A";
+    }
+
     
     return cell;
 }

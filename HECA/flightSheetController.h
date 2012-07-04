@@ -12,5 +12,7 @@
 < UITableViewDataSource, UITableViewDelegate >
 
 @property (nonatomic, strong) NSArray *dumyData;
+@property (weak, nonatomic) IBOutlet UIView *workingIndicator;
+@property (nonatomic,strong) NSMutableDictionary *arrival;
 
 @end
