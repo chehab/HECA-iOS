@@ -8,16 +8,19 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
 
-@end
+//@interface ViewController ()
+//
+//@end
 
 @implementation ViewController
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
 }
 
 - (void)viewDidUnload
@@ -30,5 +33,7 @@
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
+
 
 @end
