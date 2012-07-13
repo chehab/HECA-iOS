@@ -15,6 +15,18 @@
 		739C4E3615907113008D91FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 739C4E3515907113008D91FB /* AppDelegate.m */; };
 		739C4E3915907114008D91FB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739C4E3715907114008D91FB /* MainStoryboard.storyboard */; };
 		739C4E3C15907114008D91FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 739C4E3B15907114008D91FB /* ViewController.m */; };
+		73BD491A15908190009CEA51 /* tower@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BD491915908190009CEA51 /* tower@2x.png */; };
+		73BD491C15908194009CEA51 /* tower.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BD491B15908194009CEA51 /* tower.png */; };
+		73BD49211590819F009CEA51 /* arrival.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BD491D1590819F009CEA51 /* arrival.png */; };
+		73BD49221590819F009CEA51 /* arrival@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BD491E1590819F009CEA51 /* arrival@2x.png */; };
+		73BD49231590819F009CEA51 /* depurture.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BD491F1590819F009CEA51 /* depurture.png */; };
+		73BD49241590819F009CEA51 /* depurture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BD49201590819F009CEA51 /* depurture@2x.png */; };
+		73BD492715908CE3009CEA51 /* airport@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BD492615908CE3009CEA51 /* airport@2x.png */; };
+		73BD492915908CE9009CEA51 /* airport.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BD492815908CE9009CEA51 /* airport.png */; };
+		73BD492B15909071009CEA51 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BD492A15909071009CEA51 /* Default@2x.png */; };
+		73BD492D15909074009CEA51 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BD492C15909074009CEA51 /* Default.png */; };
+		73F5BC0E15A453B400F850F3 /* flightSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F5BC0D15A453B400F850F3 /* flightSheet.m */; };
+		73F5BC1215A4662800F850F3 /* flightSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F5BC1115A4662800F850F3 /* flightSheetController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +34,29 @@
 		739C4E2515907113008D91FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		739C4E2715907113008D91FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		739C4E2915907113008D91FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		739C4E2D15907113008D91FB /* HECA-Info.plist */ = {isa = PBXFileReference; path = "HECA-Info.plist"; sourceTree = "<group>"; };
+		739C4E2D15907113008D91FB /* HECA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HECA-Info.plist"; sourceTree = "<group>"; };
 		739C4E2F15907113008D91FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		739C4E3115907113008D91FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		739C4E3315907113008D91FB /* HECA-Prefix.pch */ = {isa = PBXFileReference; path = "HECA-Prefix.pch"; sourceTree = "<group>"; };
-		739C4E3415907113008D91FB /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		739C4E3315907113008D91FB /* HECA-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HECA-Prefix.pch"; sourceTree = "<group>"; };
+		739C4E3415907113008D91FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		739C4E3515907113008D91FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		739C4E3815907114008D91FB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		739C4E3A15907114008D91FB /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		739C4E3A15907114008D91FB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		739C4E3B15907114008D91FB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		73BD491915908190009CEA51 /* tower@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tower@2x.png"; sourceTree = "<group>"; };
+		73BD491B15908194009CEA51 /* tower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tower.png; sourceTree = "<group>"; };
+		73BD491D1590819F009CEA51 /* arrival.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrival.png; sourceTree = "<group>"; };
+		73BD491E1590819F009CEA51 /* arrival@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrival@2x.png"; sourceTree = "<group>"; };
+		73BD491F1590819F009CEA51 /* depurture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = depurture.png; sourceTree = "<group>"; };
+		73BD49201590819F009CEA51 /* depurture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "depurture@2x.png"; sourceTree = "<group>"; };
+		73BD492615908CE3009CEA51 /* airport@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "airport@2x.png"; sourceTree = "<group>"; };
+		73BD492815908CE9009CEA51 /* airport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airport.png; sourceTree = "<group>"; };
+		73BD492A15909071009CEA51 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		73BD492C15909074009CEA51 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		73F5BC0C15A453B400F850F3 /* flightSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flightSheet.h; sourceTree = "<group>"; };
+		73F5BC0D15A453B400F850F3 /* flightSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = flightSheet.m; sourceTree = "<group>"; };
+		73F5BC1015A4662700F850F3 /* flightSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flightSheetController.h; sourceTree = "<group>"; };
+		73F5BC1115A4662800F850F3 /* flightSheetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = flightSheetController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +76,7 @@
 		739C4E1615907111008D91FB = {
 			isa = PBXGroup;
 			children = (
+				73BD492515908BD0009CEA51 /* graphic */,
 				739C4E2B15907113008D91FB /* HECA */,
 				739C4E2415907113008D91FB /* Frameworks */,
 				739C4E2215907113008D91FB /* Products */,
@@ -82,6 +109,7 @@
 				739C4E3715907114008D91FB /* MainStoryboard.storyboard */,
 				739C4E3A15907114008D91FB /* ViewController.h */,
 				739C4E3B15907114008D91FB /* ViewController.m */,
+				73F5BC1315A4663100F850F3 /* flightSheet */,
 				739C4E2C15907113008D91FB /* Supporting Files */,
 			);
 			path = HECA;
@@ -96,6 +124,34 @@
 				739C4E3315907113008D91FB /* HECA-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		73BD492515908BD0009CEA51 /* graphic */ = {
+			isa = PBXGroup;
+			children = (
+				73BD492C15909074009CEA51 /* Default.png */,
+				73BD492A15909071009CEA51 /* Default@2x.png */,
+				73BD492815908CE9009CEA51 /* airport.png */,
+				73BD492615908CE3009CEA51 /* airport@2x.png */,
+				73BD491D1590819F009CEA51 /* arrival.png */,
+				73BD491E1590819F009CEA51 /* arrival@2x.png */,
+				73BD491F1590819F009CEA51 /* depurture.png */,
+				73BD49201590819F009CEA51 /* depurture@2x.png */,
+				73BD491B15908194009CEA51 /* tower.png */,
+				73BD491915908190009CEA51 /* tower@2x.png */,
+			);
+			name = graphic;
+			sourceTree = "<group>";
+		};
+		73F5BC1315A4663100F850F3 /* flightSheet */ = {
+			isa = PBXGroup;
+			children = (
+				73F5BC0C15A453B400F850F3 /* flightSheet.h */,
+				73F5BC0D15A453B400F850F3 /* flightSheet.m */,
+				73F5BC1015A4662700F850F3 /* flightSheetController.h */,
+				73F5BC1115A4662800F850F3 /* flightSheetController.m */,
+			);
+			name = flightSheet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +207,16 @@
 			files = (
 				739C4E3015907113008D91FB /* InfoPlist.strings in Resources */,
 				739C4E3915907114008D91FB /* MainStoryboard.storyboard in Resources */,
+				73BD491A15908190009CEA51 /* tower@2x.png in Resources */,
+				73BD491C15908194009CEA51 /* tower.png in Resources */,
+				73BD49211590819F009CEA51 /* arrival.png in Resources */,
+				73BD49221590819F009CEA51 /* arrival@2x.png in Resources */,
+				73BD49231590819F009CEA51 /* depurture.png in Resources */,
+				73BD49241590819F009CEA51 /* depurture@2x.png in Resources */,
+				73BD492715908CE3009CEA51 /* airport@2x.png in Resources */,
+				73BD492915908CE9009CEA51 /* airport.png in Resources */,
+				73BD492B15909071009CEA51 /* Default@2x.png in Resources */,
+				73BD492D15909074009CEA51 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +230,8 @@
 				739C4E3215907113008D91FB /* main.m in Sources */,
 				739C4E3615907113008D91FB /* AppDelegate.m in Sources */,
 				739C4E3C15907114008D91FB /* ViewController.m in Sources */,
+				73F5BC0E15A453B400F850F3 /* flightSheet.m in Sources */,
+				73F5BC1215A4662800F850F3 /* flightSheetController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +308,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HECA/HECA-Prefix.pch";
 				INFOPLIST_FILE = "HECA/HECA-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -251,6 +320,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HECA/HECA-Prefix.pch";
 				INFOPLIST_FILE = "HECA/HECA-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -275,6 +345,7 @@
 				739C4E4115907114008D91FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

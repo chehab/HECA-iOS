@@ -190,9 +190,18 @@
 
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
-
-    [self loadHECABoardDataAsJSONWithFlightWay:Arrival];
+        
+    if ([[self title] isEqualToString:@"Arrival"]) {
+        [self loadHECABoardDataAsJSONWithFlightWay:Arrival];
+    }
+    else if ([[self title] isEqualToString:@"Departure"]) {
+        [self loadHECABoardDataAsJSONWithFlightWay:Departure];
+    }
+    
+    NSLog(@"TITLE:: %@",self.title);
+    
     
     self.workingIndicator.hidden = NO;
     
