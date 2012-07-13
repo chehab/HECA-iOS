@@ -13,14 +13,14 @@
 
 @synthesize airline = _airline;
 @synthesize flightNumber = _flightNumber;
-@synthesize terminalGate = _terminalGate;
+@synthesize terminalNumber = _terminalNumber;
+@synthesize hallNumber = _hallNumber;
 @synthesize clock = _clock;
-@synthesize clockMode =_clockMode;
-@synthesize clockStatus = _clockStatus;
-@synthesize diractionTitle = _diractionTitle;
+@synthesize clockDayTime = _clockDayTime;
+@synthesize clockMode = _clockMode;
 @synthesize codeIATA = _codeIATA;
 @synthesize codeICAO = _codeICAO;
-@synthesize cityCountry = _cityCountry;
+@synthesize location = _location;
 @synthesize flightStatus = _flightStatus;
 
 

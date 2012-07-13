@@ -15,44 +15,152 @@
 
 @implementation flightSheetController
 
-@synthesize dumyData = _dumyData;
 @synthesize workingIndicator = _workingIndicator;
-@synthesize arrival = _arrival;
 
-#pragma mark - GDC
+@synthesize currentFlightWay = _currentFlightWay;
+@synthesize currentTimeStamp = _currentTimeStamp;
 
-dispatch_queue_t arrivalQ;
+@synthesize departureBoard = _departureBoard;
+@synthesize arrivalBoard = _arrivalBoard;
+@synthesize fligthBoard = _fligthBoard;
 
-- (void) getCAIArrivalsDataFromJSONAsync
+@synthesize departureData = _departureData;
+@synthesize arrivalData = _arrivalData;
+@synthesize fligthData = _fligthData;
+
+@synthesize jsonConnection = _jsonConnection;
+
+
+
+
+
+
+
+#pragma mark - HECA/CAI 
+
+-(void) loadHECABoardDataAsJSONWithFlightWay:(flightWay) heading
 {
-    NSURL *arrivalsJSONURL = [NSURL URLWithString:@"http://apis.chehab.me/HECA/?json=1&arrival=1"];    
+    LOGFUNCTION
+    self.currentFlightWay = heading;
+    NSURLRequest *jsonURLRequest = nil;
+    switch (self.currentFlightWay) {
+            
+        case Arrival:
+            jsonURLRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://apis.chehab.me/HECA/?json=arrival"]];
+            break;
+            
+            
+        case Departure:
+            jsonURLRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://apis.chehab.me/HECA/?json=departure"]];
+            break;
+    } 
     
-    NSData *arrivalsJSONData = [[[NSString alloc] initWithContentsOfURL:arrivalsJSONURL] dataUsingEncoding:NSUTF8StringEncoding];
-    NSError *e = nil;
-    
-    self.arrival = [NSJSONSerialization JSONObjectWithData:arrivalsJSONData options:NSJSONReadingMutableContainers error:&e];
-    
-    NSLog(@"JSON Serialization Completed");
-    
-    dispatch_async(dispatch_get_main_queue(), 
-                   ^{ self.workingIndicator.hidden = YES; });
+    self.jsonConnection = [[NSURLConnection alloc] initWithRequest:jsonURLRequest delegate:self];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    NSAssert(self.jsonConnection != nil, @"Couldn't Establish A Connection With The Server.");
 }
 
-- (void) getCAIArrivalsDataFromJSON
+- (void) serializHECAFlightBoardFromJSONData:(NSData *)JSONData
 {
-    NSURL *arrivalsJSONURL = [NSURL URLWithString:@"http://apis.chehab.me/HECA/?json=1&arrival=1"];    
-    
-    NSData *arrivalsJSONData = [[[NSString alloc] initWithContentsOfURL:arrivalsJSONURL] dataUsingEncoding:NSUTF8StringEncoding];
+    LOGFUNCTION
     NSError *e = nil;
     
-    self.arrival = [NSJSONSerialization JSONObjectWithData:arrivalsJSONData options:NSJSONReadingMutableContainers error:&e];
-    
-    NSLog(@"%@", self.arrival);
+    switch (self.currentFlightWay) {
+            
+        case Arrival:
+            self.arrivalBoard = [NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingMutableContainers error:&e];
+            NSLog(@"%@", self.arrivalBoard);
+            break;
+            
+            
+        case Departure:
+            self.departureBoard = [NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingMutableContainers error:&e];
+            NSLog(@"%@", self.departureBoard);
+            break;
+    } 
     
     NSLog(@"JSON Serialization Completed");
-    
+    [self.tableView reloadData];
     self.workingIndicator.hidden = YES;
 }
+
+
+#pragma mark NSURLConnection delegate methods
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    NSLog(@"%s %@", __FUNCTION__, [response MIMEType]);
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    
+    switch (self.currentFlightWay) {
+            
+        case Arrival:
+            if (!self.arrivalData) self.arrivalData = [[NSMutableData alloc] init];
+            break;
+            
+            
+        case Departure:
+            if (!self.departureData) self.departureData = [[NSMutableData alloc] init];
+            break;
+    } 
+    
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    NSLog(@"%s (length: %d)", __FUNCTION__, [data length]);
+    switch (self.currentFlightWay) {
+            
+        case Arrival:
+            [self.arrivalData appendData:data];
+            break;
+            
+            
+        case Departure:
+            [self.departureData appendData:data];   
+            break;
+    } 
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    LOGFUNCTION
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;   
+    self.jsonConnection = nil;
+    
+    switch (self.currentFlightWay) {
+            
+        case Arrival:
+            NSLog(@"have data: %d bytes", [self.arrivalData length]);
+            [NSThread detachNewThreadSelector:@selector(serializHECAFlightBoardFromJSONData:) toTarget:self withObject:self.arrivalData];
+            self.arrivalData = nil;
+            break;
+            
+            
+        case Departure:
+            NSLog(@"have data: %d bytes", [self.departureData length]);
+            [NSThread detachNewThreadSelector:@selector(serializHECAFlightBoardFromJSONData:) toTarget:self withObject:self.departureData];
+            self.departureData = nil;
+            break;
+    } 
+
+    
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    LOGFUNCTION
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    if ([error code] == kCFURLErrorNotConnectedToInternet) {
+        // if we can identify the error, we can present a more precise message to the user.
+        NSDictionary *userInfo =
+        [NSDictionary dictionaryWithObject:NSLocalizedString(@"No Connection Error", @"Not connected to the Internet.")
+                                    forKey:NSLocalizedDescriptionKey];
+        NSError *noConnectionError = [NSError errorWithDomain:NSCocoaErrorDomain code:kCFURLErrorNotConnectedToInternet userInfo:userInfo];
+        [self handleError:noConnectionError];
+    } else {
+        // otherwise handle the error generically
+        [self handleError:error];
+    }
+    self.jsonConnection = nil;
+}
+
 
 
 #pragma mark -
@@ -67,25 +175,39 @@ dispatch_queue_t arrivalQ;
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+//    [self loadHECABoardDataAsJSONWithFlightWay:Arrival];
+//    
+//    self.workingIndicator.hidden = NO;
+//    [self getCAIArrivalsDataFromJSON];
+    
+//    [self.tableView reloadData];
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
+    [self loadHECABoardDataAsJSONWithFlightWay:Arrival];
+    
+    self.workingIndicator.hidden = NO;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.workingIndicator.hidden = NO;
+//    self.workingIndicator.hidden = NO;
     
 //    arrivalQ = dispatch_queue_create("me.chehab.apps.heca", NULL);
 //    dispatch_async(arrivalQ, ^{ [self getCAIArrivalsDataFromJSONAsync]; });
-    [self getCAIArrivalsDataFromJSON];
+//    [self getCAIArrivalsDataFromJSON];
     
-    self.dumyData = [[NSArray alloc] initWithObjects:@"Chehab",
-                     @"Mostafa",@"Hilmy",@"Abd El-Karim",
-                     @"Abu Tariq",@"Batul",@"Zainab", nil];
 }
 
 - (void)viewDidUnload
@@ -114,12 +236,23 @@ dispatch_queue_t arrivalQ;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 //    return [self.dumyData count];
-    return [[self.arrival objectForKey:@"Arrival"] count];
+    switch (self.currentFlightWay) {
+            
+        case Arrival:
+            return [[self.arrivalBoard objectForKey:@"Arrival"] count];
+            break;
+            
+            
+        case Departure:
+            return [[self.departureBoard objectForKey:@"departure"] count];
+            break;
+    } 
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *CellIdentifier = @"flightSheetCell";
+    LOGFUNCTION
+    static NSString *CellIdentifier = @"flightSheetCell";
         
     flightSheet *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
@@ -129,46 +262,64 @@ dispatch_queue_t arrivalQ;
                 reuseIdentifier:CellIdentifier];
     }
 
-    NSMutableDictionary *fl = [[self.arrival objectForKey:@"Arrival"] objectAtIndex:[indexPath row]];
+    NSMutableDictionary *fl = nil;
+    switch (self.currentFlightWay) {
+            
+        case Arrival:
+            fl = [[self.arrivalBoard objectForKey:@"Arrival"] objectAtIndex:[indexPath row]];
+            break;
+            
+            
+        case Departure:
+            fl = [[self.departureBoard objectForKey:@"departure"] objectAtIndex:[indexPath row]];
+            break;
+    } 
+    
+    
     // Configure the cell...
-    if (![[fl objectForKey:@"airline"] isEqualToString:@""] ) {
-        cell.airline.text = [fl objectForKey:@"airline"];
-    }
-    else {
-        cell.airline.text = @"N/A";
-    }
     
-    if (![[fl objectForKey:@"flightno"] isEqualToString:@""] ) {
-        cell.flightNumber.text = [fl objectForKey:@"flightno"];
-    }
-    else {
-        cell.flightNumber.text = @"N/A";
-    }
+    cell.airline.text = [fl objectForKey:@"airline"];
+    cell.flightNumber.text = [fl objectForKey:@"flightno"];
+    cell.location.text = [fl objectForKey:@"airport"];
+
+    // IATA Airport Code if found
+        //TODO:
     
-    if (![[fl objectForKey:@"airport"] isEqualToString:@""] ) {
-        cell.cityCountry.text = [fl objectForKey:@"airport"];
-    }
-    else {
-        cell.cityCountry.text = @"N/A";
-    }
-        
+    // ICAO Airport Code if found
+        //TODO:
+
+    
+    // Flight Status
     if (![[fl objectForKey:@"status"] isEqualToString:@""]) {
         cell.flightStatus.text = [fl objectForKey:@"status"];
-        NSLog(@"$> flightStatus = %@",[fl objectForKey:@"status"]);
     }
     else {
         cell.flightStatus.text = @"N/A";
-        NSLog(@"$> flightStatus N/A");
     }
     
+    // Terminal Number
     if (![[fl objectForKey:@"terminal"] isEqualToString:@""] ) {
-        cell.terminalGate.text = [fl objectForKey:@"terminal"];
+        cell.terminalNumber.text = [fl objectForKey:@"terminal"];
     }
     else {
-        cell.terminalGate.text = @"N/A";
+        cell.terminalNumber.text = @"-";
     }
     
-    if (![[fl objectForKey:@"eta"] isEqualToString:@""] ) {
+    // Hall Number
+    if (![[fl objectForKey:@"hall"] isEqualToString:@""] ) {
+        cell.hallNumber.text = [fl objectForKey:@"hall"];
+    }
+    else {
+        cell.hallNumber.text = @"-";
+    }
+    
+    
+    // Setting Clock and its Modes.
+    if (![[fl objectForKey:@"actual"] isEqualToString:@""] ) {
+        cell.clock.text = [fl objectForKey:@"actual"];
+        cell.clockMode.text = [fl objectForKey:@"status"];
+    }
+    else if (![[fl objectForKey:@"eta"] isEqualToString:@""] ) {
         cell.clock.text = [fl objectForKey:@"eta"];
         cell.clockMode.text = @"ETA";
     }
@@ -176,6 +327,7 @@ dispatch_queue_t arrivalQ;
         cell.clock.text = [fl objectForKey:@"sch"];
         cell.clockMode.text = @"Schedualed";
     }
+    //
     else {
         cell.clock.text = @"--:--";
         cell.clockMode.text = @"N/A";
@@ -236,5 +388,26 @@ dispatch_queue_t arrivalQ;
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
+
+#pragma mark - Error handling
+
+- (void)handleError:(NSError *)error {
+    NSLog(@"%s", __FUNCTION__);
+    NSLog(@"error is %@, %@", error, [error domain]);
+//    NSString *errorMessage = [error localizedDescription];
+    
+    // errors in NSXMLParserErrorDomain >= 10 are harmless parsing errors
+//    if ([error domain] == NSXMLParserErrorDomain && [error code] >= 10) {
+//        alertMessage(@"Cannot parse feed: %@", errorMessage);  // tell the user why parsing is stopped
+//    } else {
+//        UIAlertView *alertView = [[UIAlertView alloc]
+//                                  initWithTitle:@"Error" message:errorMessage delegate:nil
+//                                  cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//        [alertView show];
+//        [alertView release];
+//        [self dismissModalViewControllerAnimated:YES];
+//    }
+}
+
 
 @end
