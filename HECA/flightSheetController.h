@@ -10,25 +10,33 @@
 
 #define LOGFUNCTION {NSLog(@"%s", __FUNCTION__);}
 
-typedef enum{Arrival, Departure} flightWay;
+typedef enum{Arrival, Departure} flightBoards;
 
 @interface flightSheetController : UITableViewController 
 < UITableViewDataSource, UITableViewDelegate >
 
-@property (weak, nonatomic) IBOutlet UIView *workingIndicator;
+// UI Outlets
+@property (weak, nonatomic) IBOutlet UIView *navBarUpdatingIndicator;
 
+// Fitching 
+@property (nonatomic, strong) NSURLConnection *jsonConnection;
+@property (nonatomic, strong) NSTimer *updateTimer;
+
+// Refresh related
+@property (nonatomic, strong) NSString *currentTimeStamp;
+
+// Procesed Flight Board
 @property (nonatomic, strong) NSMutableDictionary *departureBoard;
 @property (nonatomic, strong) NSMutableDictionary *arrivalBoard;
 @property (nonatomic, strong) NSMutableDictionary *fligthBoard;
 
+// Fligth Data
 @property (nonatomic, strong) NSMutableData *departureData;
 @property (nonatomic, strong) NSMutableData *arrivalData;
 @property (nonatomic, strong) NSMutableData *fligthData;
 
-@property (nonatomic, readwrite) flightWay currentFlightWay;
-@property (nonatomic, strong) NSString *currentTimeStamp;
-
-@property (nonatomic, strong) NSURLConnection *jsonConnection;
-
+// Flags
+@property (nonatomic, readwrite) flightBoards currentFlightBoard;
+@property (nonatomic, readwrite) flightBoards loadFlightBoard;
 
 @end

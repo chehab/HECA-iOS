@@ -14,8 +14,8 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>airport@2x.png</string>
-				<string>airport.png</string>
+				<string>Icon@2x.png</string>
+				<string>Icon.png</string>
 				<string>Default@2x.png</string>
 				<string>Default.png</string>
 			</array>
@@ -40,7 +40,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>
-	<string>MainStoryboard</string>
+	<string>iphone</string>
 	<key>UIPrerenderedIcon</key>
 	<true/>
 	<key>UIRequiredDeviceCapabilities</key>

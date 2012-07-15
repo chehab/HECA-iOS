@@ -15,20 +15,29 @@
 
 @implementation flightSheetController
 
-@synthesize workingIndicator = _workingIndicator;
+// UI Outlets
+@synthesize navBarUpdatingIndicator = _navBarUpdatingIndicator;
 
-@synthesize currentFlightWay = _currentFlightWay;
+// Fetching 
+@synthesize jsonConnection = _jsonConnection;
+
+// Refresh related
 @synthesize currentTimeStamp = _currentTimeStamp;
+@synthesize updateTimer = _updateTimer;
 
+// Flags
+@synthesize loadFlightBoard = _loadFlightBoard;
+@synthesize currentFlightBoard = _currentFlightBoard;
+
+// Procesed Flight Board
 @synthesize departureBoard = _departureBoard;
 @synthesize arrivalBoard = _arrivalBoard;
 @synthesize fligthBoard = _fligthBoard;
 
+// Fligth Data
 @synthesize departureData = _departureData;
 @synthesize arrivalData = _arrivalData;
 @synthesize fligthData = _fligthData;
-
-@synthesize jsonConnection = _jsonConnection;
 
 
 
@@ -38,12 +47,18 @@
 
 #pragma mark - HECA/CAI 
 
--(void) loadHECABoardDataAsJSONWithFlightWay:(flightWay) heading
+-(void) updateHECACurrentFlightBoard
 {
     LOGFUNCTION
-    self.currentFlightWay = heading;
+    [self loadHECABoardDataAsJSONWithFlightBoard:self.currentFlightBoard];
+}
+
+-(void) loadHECABoardDataAsJSONWithFlightBoard:(flightBoards) heading
+{
+    LOGFUNCTION
+    self.loadFlightBoard = heading;
     NSURLRequest *jsonURLRequest = nil;
-    switch (self.currentFlightWay) {
+    switch (self.loadFlightBoard) {
             
         case Arrival:
             jsonURLRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://apis.chehab.me/HECA/?json=arrival"]];
@@ -65,23 +80,22 @@
     LOGFUNCTION
     NSError *e = nil;
     
-    switch (self.currentFlightWay) {
+    switch (self.loadFlightBoard) {
             
         case Arrival:
             self.arrivalBoard = [NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingMutableContainers error:&e];
-            NSLog(@"%@", self.arrivalBoard);
+//            NSLog(@"%@", self.arrivalBoard);
             break;
             
             
         case Departure:
             self.departureBoard = [NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingMutableContainers error:&e];
-            NSLog(@"%@", self.departureBoard);
+//            NSLog(@"%@", self.departureBoard);
             break;
     } 
     
     NSLog(@"JSON Serialization Completed");
     [self.tableView reloadData];
-    self.workingIndicator.hidden = YES;
 }
 
 
@@ -91,7 +105,7 @@
     NSLog(@"%s %@", __FUNCTION__, [response MIMEType]);
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
-    switch (self.currentFlightWay) {
+    switch (self.loadFlightBoard) {
             
         case Arrival:
             if (!self.arrivalData) self.arrivalData = [[NSMutableData alloc] init];
@@ -107,7 +121,7 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
     NSLog(@"%s (length: %d)", __FUNCTION__, [data length]);
-    switch (self.currentFlightWay) {
+    switch (self.loadFlightBoard) {
             
         case Arrival:
             [self.arrivalData appendData:data];
@@ -125,12 +139,12 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;   
     self.jsonConnection = nil;
     
-    switch (self.currentFlightWay) {
+    switch (self.loadFlightBoard) {
             
         case Arrival:
             NSLog(@"have data: %d bytes", [self.arrivalData length]);
             [NSThread detachNewThreadSelector:@selector(serializHECAFlightBoardFromJSONData:) toTarget:self withObject:self.arrivalData];
-            self.arrivalData = nil;
+            self.arrivalData = nil;          
             break;
             
             
@@ -141,6 +155,7 @@
             break;
     } 
 
+    
     
 }
 
@@ -178,32 +193,31 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-//    [self loadHECABoardDataAsJSONWithFlightWay:Arrival];
-//    
-//    self.workingIndicator.hidden = NO;
-//    [self getCAIArrivalsDataFromJSON];
-    
-//    [self.tableView reloadData];
 }
 
 
 - (void)viewDidLoad
 {
+    NSLog(@"OBJECT %@",self);
     
     [super viewDidLoad];
         
     if ([[self title] isEqualToString:@"Arrival"]) {
-        [self loadHECABoardDataAsJSONWithFlightWay:Arrival];
+        self.currentFlightBoard = Arrival;
+        [self loadHECABoardDataAsJSONWithFlightBoard:Arrival];
     }
     else if ([[self title] isEqualToString:@"Departure"]) {
-        [self loadHECABoardDataAsJSONWithFlightWay:Departure];
+        self.currentFlightBoard = Departure;
+        [self loadHECABoardDataAsJSONWithFlightBoard:Departure];
     }
     
-    NSLog(@"TITLE:: %@",self.title);
+    NSLog(@"Fligth Board:: %@",self.title);
     
-    
-    self.workingIndicator.hidden = NO;
+    self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:300.0
+                                                        target:self
+                                                      selector:@selector(updateHECACurrentFlightBoard)
+                                                      userInfo:nil
+                                                       repeats:YES];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -211,17 +225,10 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-//    self.workingIndicator.hidden = NO;
-    
-//    arrivalQ = dispatch_queue_create("me.chehab.apps.heca", NULL);
-//    dispatch_async(arrivalQ, ^{ [self getCAIArrivalsDataFromJSONAsync]; });
-//    [self getCAIArrivalsDataFromJSON];
-    
 }
 
 - (void)viewDidUnload
 {
-    [self setWorkingIndicator:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -239,13 +246,8 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-//    return [self.dumyData count];
-    switch (self.currentFlightWay) {
+//    return 1;
+    switch (self.currentFlightBoard) {
             
         case Arrival:
             return [[self.arrivalBoard objectForKey:@"Arrival"] count];
@@ -255,7 +257,23 @@
         case Departure:
             return [[self.departureBoard objectForKey:@"departure"] count];
             break;
-    } 
+    }
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+//    switch (self.currentFlightBoard) {
+//            
+//        case Arrival:
+//            return [[self.arrivalBoard objectForKey:@"Arrival"] count];
+//            break;
+//            
+//            
+//        case Departure:
+//            return [[self.departureBoard objectForKey:@"departure"] count];
+//            break;
+//    } 
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -272,15 +290,15 @@
     }
 
     NSMutableDictionary *fl = nil;
-    switch (self.currentFlightWay) {
+    switch (self.currentFlightBoard) {
             
         case Arrival:
-            fl = [[self.arrivalBoard objectForKey:@"Arrival"] objectAtIndex:[indexPath row]];
+            fl = [[self.arrivalBoard objectForKey:@"Arrival"] objectAtIndex:[indexPath section]];
             break;
             
             
         case Departure:
-            fl = [[self.departureBoard objectForKey:@"departure"] objectAtIndex:[indexPath row]];
+            fl = [[self.departureBoard objectForKey:@"departure"] objectAtIndex:[indexPath section]];
             break;
     } 
     
