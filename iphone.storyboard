@@ -5,11 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
     </dependencies>
     <scenes>
-        <!--Flight Sheet Controller-->
+        <!--Flight View Controller-->
         <scene sceneID="Ofo-Tr-yaj">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LaT-bW-B09" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="8PG-yg-cqw" customClass="flightSheetController" sceneMemberID="viewController">
+                <viewController id="8PG-yg-cqw" customClass="flightViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aek-aT-xhg">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -171,8 +171,8 @@
                                 </prototypes>
                                 <sections/>
                                 <connections>
-                                    <outlet property="dataSource" destination="8PG-yg-cqw" id="Mk6-4A-TtX"/>
-                                    <outlet property="delegate" destination="8PG-yg-cqw" id="BbQ-RT-lLr"/>
+                                    <outlet property="dataSource" destination="8PG-yg-cqw" id="rkE-UN-SfJ"/>
+                                    <outlet property="delegate" destination="8PG-yg-cqw" id="Zn2-1I-3ZX"/>
                                 </connections>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="departures-toolbar.png" id="I7U-su-e9h">
@@ -183,6 +183,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="80l-pd-Xhp"/>
+                    <connections>
+                        <outlet property="tableView" destination="6cD-ml-x5K" id="P82-TW-t1m"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="348" y="123"/>
@@ -222,12 +225,6 @@
                 <relationship kind="outlet" name="flightNumber" candidateClass="UILabel"/>
             </relationships>
         </class>
-        <class className="flightSheetController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/flightSheetController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="navBarUpdatingIndicator" candidateClass="UIView"/>
-            </relationships>
-        </class>
         <class className="flightStatusCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/flightStatusCell.h"/>
             <relationships>
@@ -238,6 +235,12 @@
                 <relationship kind="outlet" name="flightStatus" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="hallNumber" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="terminalNumber" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="flightViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/flightViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
         </class>
     </classes>

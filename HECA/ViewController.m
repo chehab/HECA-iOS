@@ -20,7 +20,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-//    [self.navigationController.navigationBar setTintColor: [UIColor colorWithPatternImage:[UIImage imageNamed:@""]]];
 }
 
 - (void)viewDidUnload
