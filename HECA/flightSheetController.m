@@ -193,6 +193,29 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+//    [self.navigationController.navigationBar setOpaque:YES];
+//    [self.navigationController.navigationBar setTranslucent:YES];
+//    
+//    [self.navigationController.navigationBar setFrame:CGRectMake(20.0, 40.0, 320.0, 75.0)];
+//   
+//    [self.tableView setBackgroundColor:[UIColor clearColor]];
+//    [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background.png"]]];
+//     
+//    if ([[self title] isEqualToString:@"Arrival"]) {
+//        [self.navigationController.navigationBar
+//         setBackgroundImage:[UIImage imageNamed:@"navbar-arrivals-150.png"] 
+//         forBarMetrics:UIBarMetricsDefault];
+//        
+//    }
+//    else if ([[self title] isEqualToString:@"Departure"]) {
+//        self.currentFlightBoard = Departure;
+//        [self.navigationController.navigationBar 
+//         setBackgroundImage:[UIImage imageNamed:@"navbar-departures.png"] 
+//         forBarMetrics:UIBarMetricsDefault];
+//    }
+//    [self.navigationController.navigationBar setTintColor: ];
+    
 }
 
 
