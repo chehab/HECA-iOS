@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#import "config.h"
 #import "flightInfoCell.h"
 #import "flightStatusCell.h"
 
-#define LOGFUNCTION {NSLog(@"%s", __FUNCTION__);}
+
+
 
 typedef enum{Arrival, Departure} flightBoards;
 

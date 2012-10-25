@@ -27,29 +27,29 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="flag-jed.png" id="4Im-Wj-pMk" userLabel="Flag Thumb">
-                                                    <rect key="frame" x="240" y="8" width="49" height="49"/>
+                                                    <rect key="frame" x="240" y="10" width="49" height="49"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="airliner-egyptair.png" id="tUI-oa-ilB" userLabel="Airliner Thumb">
-                                                    <rect key="frame" x="11" y="8" width="49" height="49"/>
+                                                    <rect key="frame" x="11" y="10" width="49" height="49"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MS300" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" id="FZX-Pz-j83" userLabel="Flight Number">
-                                                    <rect key="frame" x="63" y="8" width="85" height="25"/>
+                                                    <rect key="frame" x="63" y="10" width="107" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Egypt Air" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" id="f9v-Eg-W3a" userLabel="Air Line">
-                                                    <rect key="frame" x="63" y="30" width="85" height="22"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Egypt Air" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="f9v-Eg-W3a" userLabel="Air Line">
+                                                    <rect key="frame" x="63" y="40" width="107" height="19"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="King AbdulAziz International Jeddah Saudi.Arabia" textAlignment="right" id="PEI-Cg-LwM" userLabel="Airport Country">
-                                                    <rect key="frame" x="152" y="0.0" width="93" height="57"/>
+                                                    <rect key="frame" x="152" y="2" width="93" height="57"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="9"/>
@@ -101,31 +101,38 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
+                                                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Departed" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" id="6fk-5i-F56" userLabel="Flight Status">
+                                                    <rect key="frame" x="65" y="8" width="170" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="45"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="DATE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" id="qhd-3i-yxc" userLabel="Date">
+                                                    <rect key="frame" x="183" y="36" width="38" height="13"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="12:37" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" id="0P1-jM-sD5" userLabel="Clock">
-                                                    <rect key="frame" x="79" y="14" width="102" height="34"/>
+                                                    <rect key="frame" x="79" y="15" width="102" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="45"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="UTC+2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontSizeToFit="NO" id="FHt-Bd-q53" userLabel="UTC+2">
-                                                    <rect key="frame" x="183" y="38" width="38" height="10"/>
+                                                    <rect key="frame" x="158" y="6" width="23" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="7"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" id="j5v-GS-dQG" userLabel="Clock Mode">
-                                                    <rect key="frame" x="183" y="14" width="38" height="23"/>
+                                                    <rect key="frame" x="183" y="15" width="38" height="23"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </label>
-                                                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Departed" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" id="6fk-5i-F56" userLabel="Flight Status">
-                                                    <rect key="frame" x="65" y="7" width="170" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="45"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
@@ -144,7 +151,7 @@
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ges-fN-GXY" userLabel="Clock Status Swaper">
-                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="62"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="71" height="62"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="45"/>
                                                     <state key="normal">
@@ -163,9 +170,247 @@
                                             <outlet property="clockMode" destination="j5v-GS-dQG" id="6jh-oa-hZE"/>
                                             <outlet property="codeIATA" destination="1LG-2N-kn6" id="dJj-bp-vcn"/>
                                             <outlet property="codeICAO" destination="pAS-es-YBH" id="bGf-h4-N9G"/>
+                                            <outlet property="date" destination="qhd-3i-yxc" id="H4o-aq-fFg"/>
                                             <outlet property="flightStatus" destination="6fk-5i-F56" id="1SQ-w4-1Oi"/>
                                             <outlet property="hallNumber" destination="VpH-r3-29T" id="RC9-5b-DiU"/>
+                                            <outlet property="hallTitle" destination="hZI-2x-MzL" id="JfN-UD-U9m"/>
+                                            <outlet property="termialTitle" destination="abg-Kk-2Id" id="Zsz-MP-Mdk"/>
                                             <outlet property="terminalNumber" destination="t1a-Yu-myK" id="fXj-lK-nde"/>
+                                            <outlet property="timzone" destination="FHt-Bd-q53" id="MJU-Js-Zqp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="flightStatus2" rowHeight="63" id="1kK-ld-WnG" customClass="flightStatusCell">
+                                        <rect key="frame" x="0.0" y="173" width="320" height="63"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="62"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Terminal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontSizeToFit="NO" id="zuA-3Q-rr1" userLabel="Terminal">
+                                                    <rect key="frame" x="17" y="13" width="37" height="8"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="10"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hall" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontSizeToFit="NO" id="cFQ-jZ-wS1" userLabel="Hall">
+                                                    <rect key="frame" x="36" y="22" width="18" height="8"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="10"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" id="UXq-oE-U5N" userLabel="Terminal Number">
+                                                    <rect key="frame" x="20" y="25" width="16" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" id="Unl-lJ-mZt" userLabel="Hall Number">
+                                                    <rect key="frame" x="37" y="30" width="17" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="19"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Departed" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" id="Az1-5V-pWn" userLabel="Flight Status">
+                                                    <rect key="frame" x="65" y="7" width="170" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="45"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="DATE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" id="gtk-mZ-BbS" userLabel="Date">
+                                                    <rect key="frame" x="183" y="38" width="38" height="12"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="37" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" id="C3B-j7-dhT" userLabel="minutes">
+                                                    <rect key="frame" x="137" y="13" width="44" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="37"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="12:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" id="3Sh-2S-DyT" userLabel="hour">
+                                                    <rect key="frame" x="79" y="3" width="59" height="56"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="45"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="UTC+2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontSizeToFit="NO" id="sIW-2p-Hi9" userLabel="UTC+2">
+                                                    <rect key="frame" x="137" y="46" width="44" height="4"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="7"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" id="1lX-Zq-FxT" userLabel="Clock Mode">
+                                                    <rect key="frame" x="183" y="15" width="38" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="JED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" id="usg-k4-FQX" userLabel="IATA Code">
+                                                    <rect key="frame" x="245" y="13" width="38" height="19"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="OEJN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontSizeToFit="NO" id="aul-4o-6Ta" userLabel="ICAO Code">
+                                                    <rect key="frame" x="245" y="31" width="38" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QNl-Kp-HGo" userLabel="Clock Status Swaper">
+                                                    <rect key="frame" x="0.0" y="0.0" width="71" height="62"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="45"/>
+                                                    <state key="normal">
+                                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="12:37" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" id="d8x-Y5-Gtw" userLabel="Clock">
+                                                    <rect key="frame" x="208" y="46" width="102" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="45"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="clock" destination="d8x-Y5-Gtw" id="TF2-DK-vCZ"/>
+                                            <outlet property="clockMode" destination="1lX-Zq-FxT" id="aiv-7n-0mo"/>
+                                            <outlet property="codeIATA" destination="usg-k4-FQX" id="fd0-89-jSJ"/>
+                                            <outlet property="codeICAO" destination="aul-4o-6Ta" id="WzZ-EG-Pi6"/>
+                                            <outlet property="date" destination="gtk-mZ-BbS" id="6YJ-Pw-cbX"/>
+                                            <outlet property="flightStatus" destination="Az1-5V-pWn" id="6VX-Me-dBy"/>
+                                            <outlet property="hallNumber" destination="Unl-lJ-mZt" id="xB8-vV-Q1a"/>
+                                            <outlet property="hallTitle" destination="cFQ-jZ-wS1" id="3d8-RU-G77"/>
+                                            <outlet property="hours" destination="3Sh-2S-DyT" id="O36-7o-f4A"/>
+                                            <outlet property="minutes" destination="C3B-j7-dhT" id="uIN-kf-X44"/>
+                                            <outlet property="termialTitle" destination="zuA-3Q-rr1" id="FNx-js-arK"/>
+                                            <outlet property="terminalNumber" destination="UXq-oE-U5N" id="LZ7-OK-Vwo"/>
+                                            <outlet property="timzone" destination="sIW-2p-Hi9" id="P6t-3v-7Uu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="flightStatus3" rowHeight="63" id="Aia-X7-vYo" customClass="flightStatusCell">
+                                        <rect key="frame" x="0.0" y="236" width="320" height="63"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="62"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Terminal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontSizeToFit="NO" id="BAE-mS-94E" userLabel="Terminal">
+                                                    <rect key="frame" x="17" y="13" width="37" height="8"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="10"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hall" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontSizeToFit="NO" id="v6m-iZ-s4y" userLabel="Hall">
+                                                    <rect key="frame" x="36" y="22" width="18" height="8"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="10"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" id="pHd-5P-fVw" userLabel="Terminal Number">
+                                                    <rect key="frame" x="20" y="25" width="16" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" id="Zzg-d7-GXt" userLabel="Hall Number">
+                                                    <rect key="frame" x="37" y="30" width="17" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="19"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Departed" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" id="p2y-sy-ETo" userLabel="Flight Status">
+                                                    <rect key="frame" x="65" y="8" width="170" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="45"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="DATE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" id="c9Y-rI-slE" userLabel="Date">
+                                                    <rect key="frame" x="183" y="36" width="38" height="13"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="12:37" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" id="xEb-o7-bOY" userLabel="Clock">
+                                                    <rect key="frame" x="79" y="15" width="102" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="45"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" id="x4k-P2-RLq" userLabel="Clock Mode">
+                                                    <rect key="frame" x="183" y="15" width="38" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="JED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" id="73s-El-bVt" userLabel="IATA Code">
+                                                    <rect key="frame" x="245" y="13" width="38" height="19"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="OEJN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsFontSizeToFit="NO" id="edZ-aZ-4MU" userLabel="ICAO Code">
+                                                    <rect key="frame" x="245" y="31" width="38" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iIg-tg-Nd3" userLabel="Clock Status Swaper">
+                                                    <rect key="frame" x="0.0" y="0.0" width="71" height="62"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="45"/>
+                                                    <state key="normal">
+                                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="clock" destination="xEb-o7-bOY" id="nhk-k8-VmB"/>
+                                            <outlet property="clockMode" destination="x4k-P2-RLq" id="xJZ-XW-RGP"/>
+                                            <outlet property="codeIATA" destination="73s-El-bVt" id="RWE-v4-TcD"/>
+                                            <outlet property="codeICAO" destination="edZ-aZ-4MU" id="9bt-xX-65i"/>
+                                            <outlet property="date" destination="c9Y-rI-slE" id="xA9-h2-3FZ"/>
+                                            <outlet property="flightStatus" destination="p2y-sy-ETo" id="1l2-7X-Q1c"/>
+                                            <outlet property="hallNumber" destination="Zzg-d7-GXt" id="GZ6-lp-94c"/>
+                                            <outlet property="hallTitle" destination="v6m-iZ-s4y" id="udk-5v-JyE"/>
+                                            <outlet property="termialTitle" destination="BAE-mS-94E" id="NJc-Ei-m8t"/>
+                                            <outlet property="terminalNumber" destination="pHd-5P-fVw" id="sYU-t6-fxb"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -232,9 +477,15 @@
                 <relationship kind="outlet" name="clockMode" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="codeIATA" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="codeICAO" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="date" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="flightStatus" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="hallNumber" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hallTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hours" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="minutes" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="termialTitle" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="terminalNumber" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="timzone" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="flightViewController" superclassName="UIViewController">

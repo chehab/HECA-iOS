@@ -51,18 +51,24 @@
 {
     LOGFUNCTION
     self.loadFlightBoard = heading;
-    NSURLRequest *jsonURLRequest = nil;
+    NSString *request = nil;
     switch (self.loadFlightBoard) {
             
         case Arrival:
-            jsonURLRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://apis.chehab.me/HECA/?json=arrival"]];
+            request = [NSString stringWithFormat:@"%@=%@",@"json",@"arrival"];
             break;
-            
             
         case Departure:
-            jsonURLRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://apis.chehab.me/HECA/?json=departure"]];
+            request = [NSString stringWithFormat:@"%@=%@",@"json",@"departure"];
             break;
     }
+    
+    NSURLRequest *jsonURLRequest = [NSURLRequest requestWithURL:
+                                           [NSURL URLWithString:
+                                     [NSString stringWithFormat:@"%@?%@&key=%@",APIURL,request,APIKEY]]];
+#if VERBOSE >= 2
+     NSLog(@"API Req URL =========>  %@",jsonURLRequest);
+#endif
     
     self.jsonConnection = [[NSURLConnection alloc] initWithRequest:jsonURLRequest delegate:self];
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
@@ -87,11 +93,14 @@
             //            NSLog(@"%@", self.departureBoard);
             break;
     }
-    
+#if VERBOSE >= 1    
     NSLog(@"JSON Serialization Completed");
+#endif
     
     dispatch_async(dispatch_get_main_queue(), ^{
+#if VERBOSE >= 2
         NSLog(@"dispatch_get_main_queue ---> reloadData");
+#endif
         [self.tableView reloadData];
     });
     
@@ -102,7 +111,9 @@
 #pragma mark - NSURLConnection delegate methods
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+#if VERBOSE >= 1
     NSLog(@"%s %@", __FUNCTION__, [response MIMEType]);
+#endif
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
     switch (self.loadFlightBoard) {
@@ -121,7 +132,9 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
+#if VERBOSE >= 1
     NSLog(@"%s (length: %d)", __FUNCTION__, [data length]);
+#endif
     switch (self.loadFlightBoard) {
             
         case Arrival:
@@ -202,7 +215,9 @@
 - (void)viewDidLoad
 {
     LOGFUNCTION
+#if VERBOSE >= 4
     NSLog(@"OBJECT %@",self);
+#endif
 
     [super viewDidLoad];
 
@@ -220,11 +235,11 @@
     
     
 
-//    self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:300.0
-//                                                        target:self
-//                                                      selector:@selector(updateHECACurrentFlightBoard)
-//                                                      userInfo:nil
-//                                                       repeats:YES];
+    self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:300.0
+                                                        target:self
+                                                      selector:@selector(updateHECACurrentFlightBoard)
+                                                      userInfo:nil
+                                                       repeats:YES];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -254,7 +269,9 @@
     switch (self.currentFlightBoard) {
             
         case Arrival:
+#if VERBOSE >= 2
             NSLog(@"-----> %i",[[self.arrivalBoard objectForKey:@"Arrival"] count]);
+#endif
             return [[self.arrivalBoard objectForKey:@"Arrival"] count];
             break;
             
@@ -296,7 +313,14 @@
 {
     LOGFUNCTION
     static NSString *CellIdentifier1 = @"flightInfo";
-    static NSString *CellIdentifier2 = @"flightStatus";
+    
+#if STATUSCELL == 1
+    static NSString *CellIdentifier2 = @"flightStatus1";
+#elif STATUSCELL == 2
+    static NSString *CellIdentifier2 = @"flightStatus2";
+#elif STATUSCELL == 3
+    static NSString *CellIdentifier2 = @"flightStatus3";
+#endif
     
     NSMutableDictionary *fl = nil;
     switch (self.currentFlightBoard) {
@@ -323,6 +347,16 @@
 
         // Configure the cell...
         
+        //UI: Set Cell Background
+        [infoCell setBackgroundColor:[UIColor yellowColor]];
+        [infoCell setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background-flightInfo-1-tableViewCell"]]];
+        //UI: Set Text Color
+        infoCell.flightNumber.textColor   = [UIColor whiteColor];
+        infoCell.airliner.textColor       = [UIColor whiteColor];
+        infoCell.airportCountry.textColor = [UIColor whiteColor];
+        
+        
+        //Basic
         infoCell.airliner.text = [fl objectForKey:@"airline"];
         infoCell.flightNumber.text = [fl objectForKey:@"flightno"];
         infoCell.airportCountry.text = [fl objectForKey:@"airport"];
@@ -344,32 +378,93 @@
                         reuseIdentifier:CellIdentifier2];
         }
         
+        //UI: Set Cell Background
+        [statusCell setBackgroundColor:[UIColor yellowColor]];
+        [statusCell setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background-flightStatus-2-tableViewCell"]]];
+        //UI: Set Text Color        
+        statusCell.codeIATA.textColor       = [UIColor whiteColor];
+        statusCell.codeICAO.textColor       = [UIColor whiteColor];        
+        statusCell.clockMode.textColor      = [UIColor whiteColor];
+        statusCell.flightStatus.textColor   = [UIColor whiteColor];
+        statusCell.hallNumber.textColor     = [UIColor whiteColor];
+        statusCell.terminalNumber.textColor = [UIColor whiteColor];
+        statusCell.termialTitle.textColor   = [UIColor whiteColor];
+        statusCell.hallTitle.textColor      = [UIColor whiteColor];
+        statusCell.date.textColor           = [UIColor whiteColor];
+        
+#if STATUSCELL == 1 || STATUSCELL == 3
+        statusCell.clock.textColor          = [UIColor whiteColor];
+#endif
+#if STATUSCELL == 1
+        statusCell.timzone.textColor        = [UIColor whiteColor];
+#elif STATUSCELL == 2
+        statusCell.hours.textColor          = [UIColor whiteColor];
+        statusCell.minutes.textColor        = [UIColor whiteColor];
+#endif
+        
+        
         //TODO: IATA Airport Code
         
         //TODO: ICAO Airport Code
         
         // Setting Clock and its Modes.
+        
+#if STATUSCELL == 2
+        NSRange hr = {0,3};
+        NSRange mn = {3,2};
+#endif
+        
         if (![[fl objectForKey:@"actual"] isEqualToString:@""] ) {
+#if STATUSCELL == 1 || STATUSCELL == 3
             statusCell.clock.text = [fl objectForKey:@"actual"];
+#endif
+#if STATUSCELL == 2
+            statusCell.hours.text = [[fl objectForKey:@"actual"] substringWithRange:hr];
+            statusCell.minutes.text = [[fl objectForKey:@"actual"] substringWithRange:mn];
+#endif
             //statusCell.clockMode.text = [fl objectForKey:@"status"];
             statusCell.flightStatus.text = [fl objectForKey:@"status"];
         }
         else if (![[fl objectForKey:@"eta"] isEqualToString:@""] ) {
+#if STATUSCELL == 1 || STATUSCELL == 3
             statusCell.clock.text = [fl objectForKey:@"eta"];
+#endif
+#if STATUSCELL == 2
+            statusCell.hours.text = [[fl objectForKey:@"eta"] substringWithRange:hr];
+            statusCell.minutes.text = [[fl objectForKey:@"eta"] substringWithRange:mn];
+#endif
             statusCell.clockMode.text = @"ETA";
             statusCell.flightStatus.text= @"Live";
         }
         else if (![[fl objectForKey:@"sch"] isEqualToString:@""] ) {
+#if STATUSCELL == 1 || STATUSCELL == 3
             statusCell.clock.text = [fl objectForKey:@"sch"];
+#endif
+#if STATUSCELL == 2
+            statusCell.hours.text = [[fl objectForKey:@"sch"] substringWithRange:hr];
+            statusCell.minutes.text = [[fl objectForKey:@"sch"] substringWithRange:mn];
+#endif
             statusCell.clockMode.text = @"Sch";
             statusCell.flightStatus.text= @"Schedualed";
         }
         else {
+#if STATUSCELL == 1 || STATUSCELL == 3
             statusCell.clock.text = @"--:--";
+#endif
             statusCell.clockMode.text = @"N/A";
             statusCell.flightStatus.text = @"N/A";
         }
         
+        // Date
+        if (![[fl objectForKey:@"date"] isEqualToString:@""] ) {
+            statusCell.date.text = [[[fl objectForKey:@"date"]
+                stringByReplacingOccurrencesOfString:@"2012"
+                                          withString:@""]
+                     stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]; 
+        }
+        else {
+            [statusCell.date  setHidden:YES];
+        }
         
         // Hall Number
         if (![[fl objectForKey:@"hall"] isEqualToString:@""] ) {
@@ -377,6 +472,8 @@
         }
         else {
             statusCell.hallNumber.text = @"-";
+            [statusCell.hallNumber  setHidden:YES];
+            [statusCell.hallTitle  setHidden:YES];
         }
         
         

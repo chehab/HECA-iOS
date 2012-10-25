@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "config.h"
+
 @interface flightInfoCell : UITableViewCell
 
 @property (nonatomic, strong) IBOutlet UILabel *flightNumber;
