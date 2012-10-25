@@ -35,6 +35,15 @@
 		7300CC7615C6450200F97A4B /* flightInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7300CC7515C6450200F97A4B /* flightInfoCell.m */; };
 		7300CC7915C6562000F97A4B /* flightStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7300CC7815C6562000F97A4B /* flightStatusCell.m */; };
 		7300CC8315C67A2100F97A4B /* flightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7300CC8215C67A2100F97A4B /* flightViewController.m */; };
+		734A32A11639938800848109 /* flightSheetDefaultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 734A32A01639938800848109 /* flightSheetDefaultCell.m */; };
+		734A32AA1639939900848109 /* flightSheetsDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 734A32A21639939900848109 /* flightSheetsDefault.png */; };
+		734A32AB1639939900848109 /* flightSheetsDefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 734A32A31639939900848109 /* flightSheetsDefault@2x.png */; };
+		734A32AC1639939900848109 /* flightstatus-approach.png in Resources */ = {isa = PBXBuildFile; fileRef = 734A32A41639939900848109 /* flightstatus-approach.png */; };
+		734A32AD1639939900848109 /* flightstatus-approach@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 734A32A51639939900848109 /* flightstatus-approach@2x.png */; };
+		734A32AE1639939900848109 /* flightstatus-departing.png in Resources */ = {isa = PBXBuildFile; fileRef = 734A32A61639939900848109 /* flightstatus-departing.png */; };
+		734A32AF1639939900848109 /* flightstatus-departing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 734A32A71639939900848109 /* flightstatus-departing@2x.png */; };
+		734A32B01639939900848109 /* flightstatus-inflight.png in Resources */ = {isa = PBXBuildFile; fileRef = 734A32A81639939900848109 /* flightstatus-inflight.png */; };
+		734A32B11639939900848109 /* flightstatus-inflight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 734A32A91639939900848109 /* flightstatus-inflight@2x.png */; };
 		739C4E2615907113008D91FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739C4E2515907113008D91FB /* UIKit.framework */; };
 		739C4E2815907113008D91FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739C4E2715907113008D91FB /* Foundation.framework */; };
 		739C4E2A15907113008D91FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739C4E2915907113008D91FB /* CoreGraphics.framework */; };
@@ -76,6 +85,16 @@
 		7300CC7815C6562000F97A4B /* flightStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = flightStatusCell.m; sourceTree = "<group>"; };
 		7300CC8115C67A2000F97A4B /* flightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flightViewController.h; sourceTree = "<group>"; };
 		7300CC8215C67A2100F97A4B /* flightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = flightViewController.m; sourceTree = "<group>"; };
+		734A329F1639938800848109 /* flightSheetDefaultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flightSheetDefaultCell.h; sourceTree = "<group>"; };
+		734A32A01639938800848109 /* flightSheetDefaultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = flightSheetDefaultCell.m; sourceTree = "<group>"; };
+		734A32A21639939900848109 /* flightSheetsDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flightSheetsDefault.png; sourceTree = "<group>"; };
+		734A32A31639939900848109 /* flightSheetsDefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flightSheetsDefault@2x.png"; sourceTree = "<group>"; };
+		734A32A41639939900848109 /* flightstatus-approach.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flightstatus-approach.png"; sourceTree = "<group>"; };
+		734A32A51639939900848109 /* flightstatus-approach@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flightstatus-approach@2x.png"; sourceTree = "<group>"; };
+		734A32A61639939900848109 /* flightstatus-departing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flightstatus-departing.png"; sourceTree = "<group>"; };
+		734A32A71639939900848109 /* flightstatus-departing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flightstatus-departing@2x.png"; sourceTree = "<group>"; };
+		734A32A81639939900848109 /* flightstatus-inflight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flightstatus-inflight.png"; sourceTree = "<group>"; };
+		734A32A91639939900848109 /* flightstatus-inflight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flightstatus-inflight@2x.png"; sourceTree = "<group>"; };
 		739C4E2115907113008D91FB /* HECA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HECA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		739C4E2515907113008D91FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		739C4E2715907113008D91FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -160,6 +179,14 @@
 		739C4E1615907111008D91FB = {
 			isa = PBXGroup;
 			children = (
+				734A32A21639939900848109 /* flightSheetsDefault.png */,
+				734A32A31639939900848109 /* flightSheetsDefault@2x.png */,
+				734A32A41639939900848109 /* flightstatus-approach.png */,
+				734A32A51639939900848109 /* flightstatus-approach@2x.png */,
+				734A32A61639939900848109 /* flightstatus-departing.png */,
+				734A32A71639939900848109 /* flightstatus-departing@2x.png */,
+				734A32A81639939900848109 /* flightstatus-inflight.png */,
+				734A32A91639939900848109 /* flightstatus-inflight@2x.png */,
 				73BD492515908BD0009CEA51 /* graphic */,
 				739C4E2B15907113008D91FB /* HECA */,
 				739C4E2415907113008D91FB /* Frameworks */,
@@ -227,6 +254,8 @@
 		73F5BC1315A4663100F850F3 /* flightSheetCells */ = {
 			isa = PBXGroup;
 			children = (
+				734A329F1639938800848109 /* flightSheetDefaultCell.h */,
+				734A32A01639938800848109 /* flightSheetDefaultCell.m */,
 				7300CC7415C6450200F97A4B /* flightInfoCell.h */,
 				7300CC7515C6450200F97A4B /* flightInfoCell.m */,
 				7300CC7715C6562000F97A4B /* flightStatusCell.h */,
@@ -312,6 +341,14 @@
 				7300CC7015C6317600F97A4B /* Default.png in Resources */,
 				7300CC7115C6317600F97A4B /* Default@2x.png in Resources */,
 				7300CC7315C6321500F97A4B /* iphone.storyboard in Resources */,
+				734A32AA1639939900848109 /* flightSheetsDefault.png in Resources */,
+				734A32AB1639939900848109 /* flightSheetsDefault@2x.png in Resources */,
+				734A32AC1639939900848109 /* flightstatus-approach.png in Resources */,
+				734A32AD1639939900848109 /* flightstatus-approach@2x.png in Resources */,
+				734A32AE1639939900848109 /* flightstatus-departing.png in Resources */,
+				734A32AF1639939900848109 /* flightstatus-departing@2x.png in Resources */,
+				734A32B01639939900848109 /* flightstatus-inflight.png in Resources */,
+				734A32B11639939900848109 /* flightstatus-inflight@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +365,7 @@
 				7300CC7615C6450200F97A4B /* flightInfoCell.m in Sources */,
 				7300CC7915C6562000F97A4B /* flightStatusCell.m in Sources */,
 				7300CC8315C67A2100F97A4B /* flightViewController.m in Sources */,
+				734A32A11639938800848109 /* flightSheetDefaultCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +403,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -383,7 +421,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
