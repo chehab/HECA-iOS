@@ -88,6 +88,7 @@
 		739C4E3515907113008D91FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		739C4E3A15907114008D91FB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		739C4E3B15907114008D91FB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		73F0836315C8FC9D00AE3146 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +195,7 @@
 				739C4E3B15907114008D91FB /* ViewController.m */,
 				7300CC8115C67A2000F97A4B /* flightViewController.h */,
 				7300CC8215C67A2100F97A4B /* flightViewController.m */,
+				73F0836315C8FC9D00AE3146 /* config.h */,
 				73F5BC1315A4663100F850F3 /* flightSheetCells */,
 				739C4E2C15907113008D91FB /* Supporting Files */,
 			);

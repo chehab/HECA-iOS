@@ -4,30 +4,30 @@
    version = "1.0">
    <FileBreakpoints>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "HECA/flightSheetController.m"
-         timestampString = "363883509.598594"
+         filePath = "HECA/flightViewController.m"
+         timestampString = "365495925.87009"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "82"
-         endingLineNumber = "82"
-         landmarkName = "-serializHECAFlightBoardFromJSONData:"
+         startingLineNumber = "215"
+         endingLineNumber = "215"
+         landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "HECA/flightSheetController.m"
-         timestampString = "363897246.305774"
+         filePath = "HECA/flightViewController.m"
+         timestampString = "365495925.87009"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "122"
-         endingLineNumber = "122"
-         landmarkName = "@implementation flightSheetController"
-         landmarkType = "3">
+         startingLineNumber = "273"
+         endingLineNumber = "273"
+         landmarkName = "-numberOfSectionsInTableView:"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
