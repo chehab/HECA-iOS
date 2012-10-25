@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Cvf-c1-hAH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Cvf-c1-hAH">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
         <!--Flight View Controller-->
         <scene sceneID="Ofo-Tr-yaj">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LaT-bW-B09" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="8PG-yg-cqw" customClass="flightViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aek-aT-xhg">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
@@ -432,13 +430,13 @@
                         <outlet property="tableView" destination="6cD-ml-x5K" id="P82-TW-t1m"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LaT-bW-B09" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="348" y="123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yc3-bF-OsS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dQG-v6-ahm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="Cvf-c1-hAH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HvB-P0-dZ6">
@@ -450,6 +448,7 @@
                         <segue destination="8PG-yg-cqw" kind="relationship" relationship="rootViewController" id="GLG-xc-V6a"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dQG-v6-ahm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-78" y="123"/>
         </scene>
