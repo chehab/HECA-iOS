@@ -11,6 +11,7 @@
 #import "config.h"
 #import "flightInfoCell.h"
 #import "flightStatusCell.h"
+#import "flightSheetDefaultCell.h"
 
 
 

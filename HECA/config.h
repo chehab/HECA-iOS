@@ -15,8 +15,9 @@
 #define STATUSCELL 3
 
 
-#define APIURL @"http://apis.chehab.me/HECA/"
-#define APIKEY @"94a3a5c610532a30d73c866041d8e81878db5da28d161a7cb725198a62b27421"
+#define APIURL @"http://api.chehab.me/HECA/?"
+#define APITESTMODE @"http://api.chehab.me/HECA/?cache=force&"
+#define APIKEY @"&key=94a3a5c610532a30d73c866041d8e81878db5da28d161a7cb725198a62b27421"
 
 
 #if VERBOSE > 3

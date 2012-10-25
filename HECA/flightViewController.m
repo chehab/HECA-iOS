@@ -65,7 +65,11 @@
     
     NSURLRequest *jsonURLRequest = [NSURLRequest requestWithURL:
                                            [NSURL URLWithString:
-                                     [NSString stringWithFormat:@"%@?%@&key=%@",APIURL,request,APIKEY]]];
+                                     [NSString stringWithFormat:@"%@%@%@",APITESTMODE,request,APIKEY]]];
+    // APITESTMODE runs the API in test mode by forcing cache
+    //  must be replace with APIURL
+    
+    
 #if VERBOSE >= 2
      NSLog(@"API Req URL =========>  %@",jsonURLRequest);
 #endif
@@ -287,40 +291,21 @@
 {
     LOGFUNCTION
     // Return the number of rows in the section.   
-    return 2;
+    return 1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     LOGFUNCTION
-    switch ([indexPath row]) {
-            
-        case 0:
-            return 63;
-            break;
-            
-        case 1:
-            return 63;
-            break;
-            
-        default:
-            return 20;
-            break;
-    }
+    return 104;
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     LOGFUNCTION
-    static NSString *CellIdentifier1 = @"flightInfo";
-    
-#if STATUSCELL == 1
-    static NSString *CellIdentifier2 = @"flightStatus1";
-#elif STATUSCELL == 2
-    static NSString *CellIdentifier2 = @"flightStatus2";
-#elif STATUSCELL == 3
-    static NSString *CellIdentifier2 = @"flightStatus3";
-#endif
+    static NSString *CellIdentifier = @"flightsheet";
+
     
     NSMutableDictionary *fl = nil;
     switch (self.currentFlightBoard) {
@@ -334,163 +319,92 @@
             fl = [[self.departureBoard objectForKey:@"departure"] objectAtIndex:[indexPath section]];
             break;
     }
-    
-    if([indexPath row] == 0) {
-    
-        flightInfoCell *infoCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier1];
-        
-        if (infoCell == nil) {
-            infoCell = [[flightInfoCell alloc]
-                    initWithStyle:UITableViewCellStyleDefault
-                    reuseIdentifier:CellIdentifier1];
-        }
 
-        // Configure the cell...
-        
-        //UI: Set Cell Background
-        [infoCell setBackgroundColor:[UIColor yellowColor]];
-        [infoCell setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background-flightInfo-1-tableViewCell"]]];
-        //UI: Set Text Color
-        infoCell.flightNumber.textColor   = [UIColor whiteColor];
-        infoCell.airliner.textColor       = [UIColor whiteColor];
-        infoCell.airportCountry.textColor = [UIColor whiteColor];
-        
-        
-        //Basic
-        infoCell.airliner.text = [fl objectForKey:@"airline"];
-        infoCell.flightNumber.text = [fl objectForKey:@"flightno"];
-        infoCell.airportCountry.text = [fl objectForKey:@"airport"];
-        
-        //TODO: Airliner Thumb
-        
-        //TODO: Flag Thumb
-        
-        
-        return infoCell;
+    
+    flightSheetDefaultCell *flightSheets = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (flightSheets == nil) {
+        flightSheets = [[flightSheetDefaultCell alloc]
+                initWithStyle:UITableViewCellStyleDefault
+                reuseIdentifier:CellIdentifier];
     }
-    else
-    {
-        flightStatusCell *statusCell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier2];
-        
-        if (statusCell == nil) {
-            statusCell = [[flightStatusCell alloc]
-                        initWithStyle:UITableViewCellStyleDefault
-                        reuseIdentifier:CellIdentifier2];
+
+
+    // Configure the cell...
+    
+    //UI: Set Cell Background
+        [flightSheets setBackgroundColor:[UIColor whiteColor]];
+        [flightSheets setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"flightSheetsDefault"]]];
+    //UI: Set Text Color
+        flightSheets.flightNumber.textColor   = [UIColor whiteColor];
+        flightSheets.airliner.textColor       = [UIColor whiteColor];
+        flightSheets.clockMode.textColor      = [UIColor whiteColor];
+        flightSheets.flightStatus.textColor   = [UIColor whiteColor];
+        flightSheets.clock.textColor          = [UIColor whiteColor];
+        flightSheets.codeIATA.textColor       = [UIColor whiteColor];
+        flightSheets.city.textColor           = [UIColor whiteColor];
+        flightSheets.country.textColor        = [UIColor whiteColor];
+        flightSheets.termialinfo.textColor    = [UIColor whiteColor];
+        //Static Fields
+            //flightSheets.utc2.textColor           = [UIColor whiteColor];
+            flightSheets.cairo.textColor          = [UIColor whiteColor];
+            flightSheets.cai.textColor            = [UIColor whiteColor];
+            flightSheets.egypt.textColor          = [UIColor whiteColor];
+    
+    
+    
+    //straightforward assignment
+        flightSheets.flightNumber.text = [fl objectForKey:@"flightno"];
+        flightSheets.airliner.text     = [fl objectForKey:@"airline"];
+    
+        flightSheets.termialinfo.text  = @"##### Terminal # Hall #"; //TODO: termialinfo
+    
+        flightSheets.city.text         = [fl objectForKey:@"City"];
+        flightSheets.country.text      = [fl objectForKey:@"Country"];
+    
+    //conditinal assignment
+    
+      //AP IATA vs CAI-Nameing
+        if (![[fl objectForKey:@"IATA"] isEqualToString:@"???"] &&
+            ![[fl objectForKey:@"IATA"] isEqualToString:@"N/A"])
+        {
+            flightSheets.codeIATA.text = [fl objectForKey:@"IATA"];
+            
+        }
+        else {
+            flightSheets.codeIATA.text = [fl objectForKey:@"airport"];;
         }
         
-        //UI: Set Cell Background
-        [statusCell setBackgroundColor:[UIColor yellowColor]];
-        [statusCell setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background-flightStatus-2-tableViewCell"]]];
-        //UI: Set Text Color        
-        statusCell.codeIATA.textColor       = [UIColor whiteColor];
-        statusCell.codeICAO.textColor       = [UIColor whiteColor];        
-        statusCell.clockMode.textColor      = [UIColor whiteColor];
-        statusCell.flightStatus.textColor   = [UIColor whiteColor];
-        statusCell.hallNumber.textColor     = [UIColor whiteColor];
-        statusCell.terminalNumber.textColor = [UIColor whiteColor];
-        statusCell.termialTitle.textColor   = [UIColor whiteColor];
-        statusCell.hallTitle.textColor      = [UIColor whiteColor];
-        statusCell.date.textColor           = [UIColor whiteColor];
+      //TODO: flightStatus
+        if (![[fl objectForKey:@"status"] isEqualToString:@""]) {
+            flightSheets.flightStatus.text = [fl objectForKey:@"status"];
+        }
+        else {
+            flightSheets.flightStatus.text = @"N/A";
+        }
         
-#if STATUSCELL == 1 || STATUSCELL == 3
-        statusCell.clock.textColor          = [UIColor whiteColor];
-#endif
-#if STATUSCELL == 1
-        statusCell.timzone.textColor        = [UIColor whiteColor];
-#elif STATUSCELL == 2
-        statusCell.hours.textColor          = [UIColor whiteColor];
-        statusCell.minutes.textColor        = [UIColor whiteColor];
-#endif
-        
-        
-        //TODO: IATA Airport Code
-        
-        //TODO: ICAO Airport Code
-        
-        // Setting Clock and its Modes.
-        
-#if STATUSCELL == 2
-        NSRange hr = {0,3};
-        NSRange mn = {3,2};
-#endif
-        
+      //clock and clockMode
         if (![[fl objectForKey:@"actual"] isEqualToString:@""] ) {
-#if STATUSCELL == 1 || STATUSCELL == 3
-            statusCell.clock.text = [fl objectForKey:@"actual"];
-#endif
-#if STATUSCELL == 2
-            statusCell.hours.text = [[fl objectForKey:@"actual"] substringWithRange:hr];
-            statusCell.minutes.text = [[fl objectForKey:@"actual"] substringWithRange:mn];
-#endif
-            //statusCell.clockMode.text = [fl objectForKey:@"status"];
-            statusCell.flightStatus.text = [fl objectForKey:@"status"];
+            flightSheets.clock.text = [fl objectForKey:@"actual"];
+            flightSheets.clockMode.text = [fl objectForKey:@"status"];
         }
         else if (![[fl objectForKey:@"eta"] isEqualToString:@""] ) {
-#if STATUSCELL == 1 || STATUSCELL == 3
-            statusCell.clock.text = [fl objectForKey:@"eta"];
-#endif
-#if STATUSCELL == 2
-            statusCell.hours.text = [[fl objectForKey:@"eta"] substringWithRange:hr];
-            statusCell.minutes.text = [[fl objectForKey:@"eta"] substringWithRange:mn];
-#endif
-            statusCell.clockMode.text = @"ETA";
-            statusCell.flightStatus.text= @"Live";
+            flightSheets.clock.text = [fl objectForKey:@"eta"];
+            flightSheets.clockMode.text = @"ETA";
         }
         else if (![[fl objectForKey:@"sch"] isEqualToString:@""] ) {
-#if STATUSCELL == 1 || STATUSCELL == 3
-            statusCell.clock.text = [fl objectForKey:@"sch"];
-#endif
-#if STATUSCELL == 2
-            statusCell.hours.text = [[fl objectForKey:@"sch"] substringWithRange:hr];
-            statusCell.minutes.text = [[fl objectForKey:@"sch"] substringWithRange:mn];
-#endif
-            statusCell.clockMode.text = @"Sch";
-            statusCell.flightStatus.text= @"Schedualed";
+            flightSheets.clock.text = [fl objectForKey:@"sch"];
+            flightSheets.clockMode.text = @"Sch";
         }
         else {
-#if STATUSCELL == 1 || STATUSCELL == 3
-            statusCell.clock.text = @"--:--";
-#endif
-            statusCell.clockMode.text = @"N/A";
-            statusCell.flightStatus.text = @"N/A";
+            flightSheets.clock.text = @"--:--";
+            flightSheets.clockMode.text = @"N/A";
         }
-        
-        // Date
-        if (![[fl objectForKey:@"date"] isEqualToString:@""] ) {
-            statusCell.date.text = [[[fl objectForKey:@"date"]
-                stringByReplacingOccurrencesOfString:@"2012"
-                                          withString:@""]
-                     stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]; 
-        }
-        else {
-            [statusCell.date  setHidden:YES];
-        }
-        
-        // Hall Number
-        if (![[fl objectForKey:@"hall"] isEqualToString:@""] ) {
-            statusCell.hallNumber.text = [fl objectForKey:@"hall"];
-        }
-        else {
-            statusCell.hallNumber.text = @"-";
-            [statusCell.hallNumber  setHidden:YES];
-            [statusCell.hallTitle  setHidden:YES];
-        }
-        
-        
-        // Terminal Number
-        if (![[fl objectForKey:@"terminal"] isEqualToString:@""] ) {
-            statusCell.terminalNumber.text = [fl objectForKey:@"terminal"];
-        }
-        else {
-            statusCell.terminalNumber.text = @"-";
-        }
-        
-        
-        return statusCell;
-
-    }
+            // Setting Clock and its Modes.
+            // NSRange hr = {0,3};
+            // NSRange mn = {3,2};
     
-    return nil;
+    return flightSheets;
 }
 
 /*
