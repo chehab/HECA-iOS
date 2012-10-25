@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="6cD-ml-x5K">
-                                <rect key="frame" x="0.0" y="44" width="320" height="372"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
@@ -84,7 +84,7 @@
                                                     <rect key="frame" x="202" y="14" width="29" height="17"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="11"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" red="0.49961786684782605" green="0.49961786684782605" blue="0.49961786684782605" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="right" text="country" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VJM-Nu-ZRq" userLabel="country">
@@ -135,7 +135,6 @@
                                             <outlet property="flightNumber" destination="Fzs-4L-JnE" id="HVD-Jz-CIh"/>
                                             <outlet property="flightStatus" destination="mXx-Um-wIn" id="nfz-xa-ezu"/>
                                             <outlet property="flightStatusIcons" destination="QRc-cN-amR" id="1zJ-bJ-syl"/>
-                                            <outlet property="staticfields" destination="xZ4-iE-nNB" id="72l-uV-4aX"/>
                                             <outlet property="termialinfo" destination="PS5-GG-p9H" id="ZW8-sC-Mto"/>
                                             <outlet property="utc2" destination="xZ4-iE-nNB" id="dS8-5X-pVC"/>
                                         </connections>
@@ -147,10 +146,15 @@
                                     <outlet property="delegate" destination="8PG-yg-cqw" id="Zn2-1I-3ZX"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="departures-toolbar.png" id="I7U-su-e9h">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
+                            <tabBar contentMode="scaleToFill" id="Qeh-Al-FSi">
+                                <rect key="frame" x="0.0" y="367" width="320" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem systemItem="recents" id="xsH-Qt-o6l"/>
+                                    <tabBarItem systemItem="history" id="j4c-dF-PNY"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -168,11 +172,16 @@
             <objects>
                 <navigationController id="Cvf-c1-hAH" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HvB-P0-dZ6">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="HvB-P0-dZ6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="xpV-jx-e2s">
+                        <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="8PG-yg-cqw" kind="relationship" relationship="rootViewController" id="GLG-xc-V6a"/>
                     </connections>
@@ -183,9 +192,35 @@
         </scene>
     </scenes>
     <resources>
-        <image name="departures-toolbar.png" width="320" height="44"/>
         <image name="flightstatus-inflight.png" width="114" height="28"/>
     </resources>
+    <classes>
+        <class className="flightSheetDefaultCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/flightSheetDefaultCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="airliner" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="cai" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="cairo" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="city" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="clock" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="clockMode" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="codeIATA" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="country" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="egypt" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="flightNumber" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="flightStatus" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="flightStatusIcons" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="termialinfo" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="utc2" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="flightViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/flightViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

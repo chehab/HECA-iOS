@@ -31,4 +31,5 @@
 @property (nonatomic, strong) IBOutlet UILabel *cai;
 @property (nonatomic, strong) IBOutlet UILabel *egypt;
 
+
 @end
