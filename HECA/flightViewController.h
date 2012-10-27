@@ -46,4 +46,5 @@ typedef enum{Arrival, Departure} flightBoards;
 @property (nonatomic, readwrite) flightBoards loadFlightBoard;
 
 
+
 @end

@@ -226,8 +226,19 @@
     [super viewDidLoad];
 
     //Current Flight Board
-    self.currentFlightBoard = Arrival;
-    [self loadHECABoardDataAsJSONWithFlightBoard:Arrival];
+    
+
+    NSLog([NSString stringWithFormat:@"> title: %@",[self title] ]);
+    if([[self title] isEqualToString:@"Arrival"])
+    {
+        self.currentFlightBoard = Arrival;
+        [self loadHECABoardDataAsJSONWithFlightBoard: Arrival];
+    }
+    else if ([[self title] isEqualToString:@"Departure"])
+    {
+        self.currentFlightBoard = Departure;
+        [self loadHECABoardDataAsJSONWithFlightBoard: Departure];
+    }
     
     //Clear/Add TableView Background
     [self.tableView setBackgroundColor:[UIColor clearColor]];

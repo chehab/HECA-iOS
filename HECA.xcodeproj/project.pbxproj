@@ -7,34 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7300CC4615C62D8800F97A4B /* arrivals-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC3A15C62D8800F97A4B /* arrivals-toolbar.png */; };
-		7300CC4715C62D8800F97A4B /* arrivlas-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC3B15C62D8800F97A4B /* arrivlas-toolbar@2x.png */; };
-		7300CC4815C62D8800F97A4B /* background-flightInfo-1-tableViewCell.png in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC3C15C62D8800F97A4B /* background-flightInfo-1-tableViewCell.png */; };
-		7300CC4915C62D8800F97A4B /* background-flightInfo-1-tableViewCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC3D15C62D8800F97A4B /* background-flightInfo-1-tableViewCell@2x.png */; };
-		7300CC4A15C62D8800F97A4B /* background-flightStatus-2-tableViewCell.png in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC3E15C62D8800F97A4B /* background-flightStatus-2-tableViewCell.png */; };
-		7300CC4B15C62D8800F97A4B /* background-flightStatus-2-tableViewCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC3F15C62D8800F97A4B /* background-flightStatus-2-tableViewCell@2x.png */; };
-		7300CC4C15C62D8800F97A4B /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC4015C62D8800F97A4B /* background.png */; };
-		7300CC4D15C62D8800F97A4B /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC4115C62D8800F97A4B /* background@2x.png */; };
-		7300CC4E15C62D8800F97A4B /* departures-toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC4215C62D8800F97A4B /* departures-toolbar.png */; };
-		7300CC4F15C62D8800F97A4B /* departures-toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC4315C62D8800F97A4B /* departures-toolbar@2x.png */; };
-		7300CC5015C62D8800F97A4B /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC4415C62D8800F97A4B /* navbar.png */; };
-		7300CC5115C62D8800F97A4B /* navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC4515C62D8800F97A4B /* navbar@2x.png */; };
-		7300CC5515C62D9800F97A4B /* flag-jed.png in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC5315C62D9800F97A4B /* flag-jed.png */; };
-		7300CC5615C62D9800F97A4B /* flag-jed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC5415C62D9800F97A4B /* flag-jed@2x.png */; };
-		7300CC5A15C62DA800F97A4B /* airliner-egyptair.png in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC5815C62DA800F97A4B /* airliner-egyptair.png */; };
-		7300CC5B15C62DA800F97A4B /* airliner-egyptair@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC5915C62DA800F97A4B /* airliner-egyptair@2x.png */; };
-		7300CC6315C62E7D00F97A4B /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC5D15C62E7D00F97A4B /* Icon-Small.png */; };
-		7300CC6415C62E7D00F97A4B /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC5E15C62E7D00F97A4B /* Icon-Small@2x.png */; };
-		7300CC6515C62E7D00F97A4B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC5F15C62E7D00F97A4B /* Icon.png */; };
-		7300CC6615C62E7D00F97A4B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC6015C62E7D00F97A4B /* Icon@2x.png */; };
-		7300CC6715C62E7D00F97A4B /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC6115C62E7D00F97A4B /* iTunesArtwork@2x.png */; };
-		7300CC6815C62E7D00F97A4B /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC6215C62E7D00F97A4B /* iTunesArtwork */; };
-		7300CC7015C6317600F97A4B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC6E15C6317600F97A4B /* Default.png */; };
-		7300CC7115C6317600F97A4B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC6F15C6317600F97A4B /* Default@2x.png */; };
 		7300CC7315C6321500F97A4B /* iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7300CC7215C6321500F97A4B /* iphone.storyboard */; };
 		7300CC7615C6450200F97A4B /* flightInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7300CC7515C6450200F97A4B /* flightInfoCell.m */; };
 		7300CC7915C6562000F97A4B /* flightStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7300CC7815C6562000F97A4B /* flightStatusCell.m */; };
 		7300CC8315C67A2100F97A4B /* flightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7300CC8215C67A2100F97A4B /* flightViewController.m */; };
+		7307EF471639BF100004E600 /* tabbar-arrival@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7307EF451639BF100004E600 /* tabbar-arrival@2x.png */; };
+		7307EF481639BF100004E600 /* tabbar-departuer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7307EF461639BF100004E600 /* tabbar-departuer@2x.png */; };
+		7307EF4C1639BF370004E600 /* tabbar-arrival.png in Resources */ = {isa = PBXBuildFile; fileRef = 7307EF4A1639BF370004E600 /* tabbar-arrival.png */; };
+		7307EF4D1639BF370004E600 /* tabbar-departuer.png in Resources */ = {isa = PBXBuildFile; fileRef = 7307EF4B1639BF370004E600 /* tabbar-departuer.png */; };
 		734A32A11639938800848109 /* flightSheetDefaultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 734A32A01639938800848109 /* flightSheetDefaultCell.m */; };
 		734A32AA1639939900848109 /* flightSheetsDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 734A32A21639939900848109 /* flightSheetsDefault.png */; };
 		734A32AB1639939900848109 /* flightSheetsDefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 734A32A31639939900848109 /* flightSheetsDefault@2x.png */; };
@@ -54,30 +34,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7300CC3A15C62D8800F97A4B /* arrivals-toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrivals-toolbar.png"; sourceTree = "<group>"; };
-		7300CC3B15C62D8800F97A4B /* arrivlas-toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrivlas-toolbar@2x.png"; sourceTree = "<group>"; };
-		7300CC3C15C62D8800F97A4B /* background-flightInfo-1-tableViewCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-flightInfo-1-tableViewCell.png"; sourceTree = "<group>"; };
-		7300CC3D15C62D8800F97A4B /* background-flightInfo-1-tableViewCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-flightInfo-1-tableViewCell@2x.png"; sourceTree = "<group>"; };
-		7300CC3E15C62D8800F97A4B /* background-flightStatus-2-tableViewCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-flightStatus-2-tableViewCell.png"; sourceTree = "<group>"; };
-		7300CC3F15C62D8800F97A4B /* background-flightStatus-2-tableViewCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-flightStatus-2-tableViewCell@2x.png"; sourceTree = "<group>"; };
-		7300CC4015C62D8800F97A4B /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		7300CC4115C62D8800F97A4B /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
-		7300CC4215C62D8800F97A4B /* departures-toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "departures-toolbar.png"; sourceTree = "<group>"; };
-		7300CC4315C62D8800F97A4B /* departures-toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "departures-toolbar@2x.png"; sourceTree = "<group>"; };
-		7300CC4415C62D8800F97A4B /* navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar.png; sourceTree = "<group>"; };
-		7300CC4515C62D8800F97A4B /* navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar@2x.png"; sourceTree = "<group>"; };
-		7300CC5315C62D9800F97A4B /* flag-jed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flag-jed.png"; sourceTree = "<group>"; };
-		7300CC5415C62D9800F97A4B /* flag-jed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flag-jed@2x.png"; sourceTree = "<group>"; };
-		7300CC5815C62DA800F97A4B /* airliner-egyptair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "airliner-egyptair.png"; sourceTree = "<group>"; };
-		7300CC5915C62DA800F97A4B /* airliner-egyptair@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "airliner-egyptair@2x.png"; sourceTree = "<group>"; };
-		7300CC5D15C62E7D00F97A4B /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
-		7300CC5E15C62E7D00F97A4B /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
-		7300CC5F15C62E7D00F97A4B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		7300CC6015C62E7D00F97A4B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		7300CC6115C62E7D00F97A4B /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
-		7300CC6215C62E7D00F97A4B /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
-		7300CC6E15C6317600F97A4B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		7300CC6F15C6317600F97A4B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		7300CC7215C6321500F97A4B /* iphone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iphone.storyboard; path = ../iphone.storyboard; sourceTree = "<group>"; };
 		7300CC7415C6450200F97A4B /* flightInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flightInfoCell.h; sourceTree = "<group>"; };
 		7300CC7515C6450200F97A4B /* flightInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = flightInfoCell.m; sourceTree = "<group>"; };
@@ -85,6 +41,10 @@
 		7300CC7815C6562000F97A4B /* flightStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = flightStatusCell.m; sourceTree = "<group>"; };
 		7300CC8115C67A2000F97A4B /* flightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flightViewController.h; sourceTree = "<group>"; };
 		7300CC8215C67A2100F97A4B /* flightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = flightViewController.m; sourceTree = "<group>"; };
+		7307EF451639BF100004E600 /* tabbar-arrival@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-arrival@2x.png"; sourceTree = "<group>"; };
+		7307EF461639BF100004E600 /* tabbar-departuer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-departuer@2x.png"; sourceTree = "<group>"; };
+		7307EF4A1639BF370004E600 /* tabbar-arrival.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-arrival.png"; sourceTree = "<group>"; };
+		7307EF4B1639BF370004E600 /* tabbar-departuer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-departuer.png"; sourceTree = "<group>"; };
 		734A329F1639938800848109 /* flightSheetDefaultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flightSheetDefaultCell.h; sourceTree = "<group>"; };
 		734A32A01639938800848109 /* flightSheetDefaultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = flightSheetDefaultCell.m; sourceTree = "<group>"; };
 		734A32A21639939900848109 /* flightSheetsDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flightSheetsDefault.png; sourceTree = "<group>"; };
@@ -124,59 +84,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7300CC5215C62D8C00F97A4B /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				7300CC3A15C62D8800F97A4B /* arrivals-toolbar.png */,
-				7300CC3B15C62D8800F97A4B /* arrivlas-toolbar@2x.png */,
-				7300CC3C15C62D8800F97A4B /* background-flightInfo-1-tableViewCell.png */,
-				7300CC3D15C62D8800F97A4B /* background-flightInfo-1-tableViewCell@2x.png */,
-				7300CC3E15C62D8800F97A4B /* background-flightStatus-2-tableViewCell.png */,
-				7300CC3F15C62D8800F97A4B /* background-flightStatus-2-tableViewCell@2x.png */,
-				7300CC4015C62D8800F97A4B /* background.png */,
-				7300CC4115C62D8800F97A4B /* background@2x.png */,
-				7300CC6E15C6317600F97A4B /* Default.png */,
-				7300CC6F15C6317600F97A4B /* Default@2x.png */,
-				7300CC4215C62D8800F97A4B /* departures-toolbar.png */,
-				7300CC4315C62D8800F97A4B /* departures-toolbar@2x.png */,
-				7300CC4415C62D8800F97A4B /* navbar.png */,
-				7300CC4515C62D8800F97A4B /* navbar@2x.png */,
-			);
-			name = UI;
-			sourceTree = "<group>";
-		};
-		7300CC5715C62D9B00F97A4B /* flags */ = {
-			isa = PBXGroup;
-			children = (
-				7300CC5315C62D9800F97A4B /* flag-jed.png */,
-				7300CC5415C62D9800F97A4B /* flag-jed@2x.png */,
-			);
-			name = flags;
-			sourceTree = "<group>";
-		};
-		7300CC5C15C62DAC00F97A4B /* airliner */ = {
-			isa = PBXGroup;
-			children = (
-				7300CC5815C62DA800F97A4B /* airliner-egyptair.png */,
-				7300CC5915C62DA800F97A4B /* airliner-egyptair@2x.png */,
-			);
-			name = airliner;
-			sourceTree = "<group>";
-		};
-		7300CC6915C62E8000F97A4B /* icons */ = {
-			isa = PBXGroup;
-			children = (
-				7300CC5D15C62E7D00F97A4B /* Icon-Small.png */,
-				7300CC5E15C62E7D00F97A4B /* Icon-Small@2x.png */,
-				7300CC5F15C62E7D00F97A4B /* Icon.png */,
-				7300CC6015C62E7D00F97A4B /* Icon@2x.png */,
-				7300CC6115C62E7D00F97A4B /* iTunesArtwork@2x.png */,
-				7300CC6215C62E7D00F97A4B /* iTunesArtwork */,
-			);
-			name = icons;
-			sourceTree = "<group>";
-		};
-		739C4E1615907111008D91FB = {
+		7313CCD1163C165D001CAB4F /* assets */ = {
 			isa = PBXGroup;
 			children = (
 				734A32A21639939900848109 /* flightSheetsDefault.png */,
@@ -187,7 +95,18 @@
 				734A32A71639939900848109 /* flightstatus-departing@2x.png */,
 				734A32A81639939900848109 /* flightstatus-inflight.png */,
 				734A32A91639939900848109 /* flightstatus-inflight@2x.png */,
-				73BD492515908BD0009CEA51 /* graphic */,
+				7307EF451639BF100004E600 /* tabbar-arrival@2x.png */,
+				7307EF461639BF100004E600 /* tabbar-departuer@2x.png */,
+				7307EF4A1639BF370004E600 /* tabbar-arrival.png */,
+				7307EF4B1639BF370004E600 /* tabbar-departuer.png */,
+			);
+			name = assets;
+			sourceTree = "<group>";
+		};
+		739C4E1615907111008D91FB = {
+			isa = PBXGroup;
+			children = (
+				7313CCD1163C165D001CAB4F /* assets */,
 				739C4E2B15907113008D91FB /* HECA */,
 				739C4E2415907113008D91FB /* Frameworks */,
 				739C4E2215907113008D91FB /* Products */,
@@ -238,17 +157,6 @@
 				739C4E3315907113008D91FB /* HECA-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		73BD492515908BD0009CEA51 /* graphic */ = {
-			isa = PBXGroup;
-			children = (
-				7300CC5C15C62DAC00F97A4B /* airliner */,
-				7300CC5715C62D9B00F97A4B /* flags */,
-				7300CC5215C62D8C00F97A4B /* UI */,
-				7300CC6915C62E8000F97A4B /* icons */,
-			);
-			name = graphic;
 			sourceTree = "<group>";
 		};
 		73F5BC1315A4663100F850F3 /* flightSheetCells */ = {
@@ -316,30 +224,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				739C4E3015907113008D91FB /* InfoPlist.strings in Resources */,
-				7300CC4615C62D8800F97A4B /* arrivals-toolbar.png in Resources */,
-				7300CC4715C62D8800F97A4B /* arrivlas-toolbar@2x.png in Resources */,
-				7300CC4815C62D8800F97A4B /* background-flightInfo-1-tableViewCell.png in Resources */,
-				7300CC4915C62D8800F97A4B /* background-flightInfo-1-tableViewCell@2x.png in Resources */,
-				7300CC4A15C62D8800F97A4B /* background-flightStatus-2-tableViewCell.png in Resources */,
-				7300CC4B15C62D8800F97A4B /* background-flightStatus-2-tableViewCell@2x.png in Resources */,
-				7300CC4C15C62D8800F97A4B /* background.png in Resources */,
-				7300CC4D15C62D8800F97A4B /* background@2x.png in Resources */,
-				7300CC4E15C62D8800F97A4B /* departures-toolbar.png in Resources */,
-				7300CC4F15C62D8800F97A4B /* departures-toolbar@2x.png in Resources */,
-				7300CC5015C62D8800F97A4B /* navbar.png in Resources */,
-				7300CC5115C62D8800F97A4B /* navbar@2x.png in Resources */,
-				7300CC5515C62D9800F97A4B /* flag-jed.png in Resources */,
-				7300CC5615C62D9800F97A4B /* flag-jed@2x.png in Resources */,
-				7300CC5A15C62DA800F97A4B /* airliner-egyptair.png in Resources */,
-				7300CC5B15C62DA800F97A4B /* airliner-egyptair@2x.png in Resources */,
-				7300CC6315C62E7D00F97A4B /* Icon-Small.png in Resources */,
-				7300CC6415C62E7D00F97A4B /* Icon-Small@2x.png in Resources */,
-				7300CC6515C62E7D00F97A4B /* Icon.png in Resources */,
-				7300CC6615C62E7D00F97A4B /* Icon@2x.png in Resources */,
-				7300CC6715C62E7D00F97A4B /* iTunesArtwork@2x.png in Resources */,
-				7300CC6815C62E7D00F97A4B /* iTunesArtwork in Resources */,
-				7300CC7015C6317600F97A4B /* Default.png in Resources */,
-				7300CC7115C6317600F97A4B /* Default@2x.png in Resources */,
 				7300CC7315C6321500F97A4B /* iphone.storyboard in Resources */,
 				734A32AA1639939900848109 /* flightSheetsDefault.png in Resources */,
 				734A32AB1639939900848109 /* flightSheetsDefault@2x.png in Resources */,
@@ -349,6 +233,10 @@
 				734A32AF1639939900848109 /* flightstatus-departing@2x.png in Resources */,
 				734A32B01639939900848109 /* flightstatus-inflight.png in Resources */,
 				734A32B11639939900848109 /* flightstatus-inflight@2x.png in Resources */,
+				7307EF471639BF100004E600 /* tabbar-arrival@2x.png in Resources */,
+				7307EF481639BF100004E600 /* tabbar-departuer@2x.png in Resources */,
+				7307EF4C1639BF370004E600 /* tabbar-arrival.png in Resources */,
+				7307EF4D1639BF370004E600 /* tabbar-departuer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
