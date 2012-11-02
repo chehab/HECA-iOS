@@ -444,33 +444,6 @@
         <image name="tabbar-arrival.png" width="30" height="30"/>
         <image name="tabbar-departuer.png" width="30" height="30"/>
     </resources>
-    <classes>
-        <class className="flightSheetDefaultCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/flightSheetDefaultCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="airliner" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="cai" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="cairo" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="city" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="clock" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="clockMode" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="codeIATA" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="country" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="egypt" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="flightNumber" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="flightStatus" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="flightStatusIcons" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="termialinfo" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="utc2" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="flightViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/flightViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
