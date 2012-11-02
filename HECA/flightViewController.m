@@ -63,11 +63,12 @@
             break;
     }
     
+    // `FORCECACHE` force cache use by prepinding `cache=force&` before the request
+    // alterntivly `NOCACHE` prepind `cache=false&` for no cache request. * this may take long time if server cache where outdated.
     NSURLRequest *jsonURLRequest = [NSURLRequest requestWithURL:
                                            [NSURL URLWithString:
-                                     [NSString stringWithFormat:@"%@%@%@",APITESTMODE,request,APIKEY]]];
-    // APITESTMODE runs the API in test mode by forcing cache
-    //  must be replace with APIURL
+                                     [NSString stringWithFormat:@"%@%@%@%@", APIURL, FORCECACHE, request, APIKEY]]];
+    
     
     
 #if VERBOSE >= 2
@@ -97,14 +98,17 @@
             //            NSLog(@"%@", self.departureBoard);
             break;
     }
+
 #if VERBOSE >= 1    
     NSLog(@"JSON Serialization Completed");
 #endif
     
     dispatch_async(dispatch_get_main_queue(), ^{
+        
 #if VERBOSE >= 2
         NSLog(@"dispatch_get_main_queue ---> reloadData");
 #endif
+        
         [self.tableView reloadData];
     });
     

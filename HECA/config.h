@@ -16,7 +16,8 @@
 
 
 #define APIURL @"http://api.chehab.me/HECA/?"
-#define APITESTMODE @"http://api.chehab.me/HECA/?cache=force&"
+#define FORCECACHE @"cache=force&"
+#define NOCACHE @"cache=false&"
 #define APIKEY @"&key=94a3a5c610532a30d73c866041d8e81878db5da28d161a7cb725198a62b27421"
 
 
