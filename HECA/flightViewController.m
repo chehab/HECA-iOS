@@ -16,6 +16,7 @@
 
 //UI
 @synthesize tableView = _tableView;
+@synthesize loadingIndcationView = _loadingIndcationView;
 
 // Fetching
 @synthesize jsonConnection = _jsonConnection;
@@ -103,12 +104,13 @@
     NSLog(@"JSON Serialization Completed");
 #endif
     
-    dispatch_async(dispatch_get_main_queue(), ^{
+    dispatch_async(dispatch_get_main_queue(), ^{ //Update UI
         
 #if VERBOSE >= 2
         NSLog(@"dispatch_get_main_queue ---> reloadData");
 #endif
         
+        [self.loadingIndcationView setHidden:YES];
         [self.tableView reloadData];
     });
     
@@ -246,7 +248,7 @@
     
     //Clear/Add TableView Background
     [self.tableView setBackgroundColor:[UIColor clearColor]];
-    [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]]];
+    [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background-downtown-croped"]]];
     
     //Clear Cells Boarders 
     [self.tableView setSeparatorColor:[UIColor clearColor]];
@@ -269,6 +271,7 @@
 
 - (void)viewDidUnload
 {
+    [self setLoadingIndcationView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

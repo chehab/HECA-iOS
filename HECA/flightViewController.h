@@ -23,6 +23,7 @@ typedef enum{Arrival, Departure} flightBoards;
 
 //UI
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UIView *loadingIndcationView;
 
 // Fitching
 @property (nonatomic, strong) NSURLConnection *jsonConnection;

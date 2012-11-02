@@ -18,8 +18,6 @@
 		7315E3DB164413BF00FA05AA /* flightstatus-departing.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E3C3164413BF00FA05AA /* flightstatus-departing.png */; };
 		7315E3DC164413BF00FA05AA /* flightstatus-inflight.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E3C4164413BF00FA05AA /* flightstatus-inflight.png */; };
 		7315E3DD164413BF00FA05AA /* homeScreen-defaultCell.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E3C5164413BF00FA05AA /* homeScreen-defaultCell.png */; };
-		7315E3DE164413BF00FA05AA /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E3C6164413BF00FA05AA /* Icon-Small.png */; };
-		7315E3DF164413BF00FA05AA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E3C7164413BF00FA05AA /* Icon.png */; };
 		7315E3E0164413BF00FA05AA /* tabbar-arrival.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E3C8164413BF00FA05AA /* tabbar-arrival.png */; };
 		7315E3E1164413BF00FA05AA /* tabbar-departuer.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E3C9164413BF00FA05AA /* tabbar-departuer.png */; };
 		7315E3E2164413BF00FA05AA /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E3CB164413BF00FA05AA /* background@2x.png */; };
@@ -29,15 +27,24 @@
 		7315E3E6164413BF00FA05AA /* flightstatus-departing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E3CF164413BF00FA05AA /* flightstatus-departing@2x.png */; };
 		7315E3E7164413BF00FA05AA /* flightstatus-inflight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E3D0164413BF00FA05AA /* flightstatus-inflight@2x.png */; };
 		7315E3E8164413BF00FA05AA /* homeScreen-defaultCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E3D1164413BF00FA05AA /* homeScreen-defaultCell@2x.png */; };
-		7315E3E9164413BF00FA05AA /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E3D2164413BF00FA05AA /* Icon-Small@2x.png */; };
-		7315E3EA164413BF00FA05AA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E3D3164413BF00FA05AA /* Icon@2x.png */; };
-		7315E3EB164413BF00FA05AA /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E3D4164413BF00FA05AA /* iTunesArtwork@2x.png */; };
 		7315E3EC164413BF00FA05AA /* tabbar-arrival@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E3D5164413BF00FA05AA /* tabbar-arrival@2x.png */; };
 		7315E3ED164413BF00FA05AA /* tabbar-departuer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E3D6164413BF00FA05AA /* tabbar-departuer@2x.png */; };
 		7315E3FA164417CA00FA05AA /* background-downtown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E3F9164417CA00FA05AA /* background-downtown@2x.png */; };
 		7315E3FC164417D800FA05AA /* background-downtown.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E3FB164417D800FA05AA /* background-downtown.png */; };
 		7315E40216441B2500FA05AA /* background-downtown-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E40016441B2500FA05AA /* background-downtown-568h@2x.png */; };
 		7315E40316441B2500FA05AA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E40116441B2500FA05AA /* Default-568h@2x.png */; };
+		7315E40F16443BBB00FA05AA /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E40516443BBB00FA05AA /* Icon-72.png */; };
+		7315E41016443BBB00FA05AA /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E40616443BBB00FA05AA /* Icon-72@2x.png */; };
+		7315E41116443BBB00FA05AA /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E40716443BBB00FA05AA /* Icon-Small-50.png */; };
+		7315E41216443BBB00FA05AA /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E40816443BBB00FA05AA /* Icon-Small-50@2x.png */; };
+		7315E41316443BBB00FA05AA /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E40916443BBB00FA05AA /* Icon-Small.png */; };
+		7315E41416443BBB00FA05AA /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E40A16443BBB00FA05AA /* Icon-Small@2x.png */; };
+		7315E41516443BBB00FA05AA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E40B16443BBB00FA05AA /* Icon.png */; };
+		7315E41616443BBB00FA05AA /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E40C16443BBB00FA05AA /* Icon@2x.png */; };
+		7315E41716443BBB00FA05AA /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 7315E40D16443BBB00FA05AA /* iTunesArtwork */; };
+		7315E41816443BBB00FA05AA /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E40E16443BBB00FA05AA /* iTunesArtwork@2x.png */; };
+		7315E41E164452BF00FA05AA /* loadingIndcationView@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E41D164452BF00FA05AA /* loadingIndcationView@2x.png */; };
+		7315E420164452C900FA05AA /* loadingIndcationView.png in Resources */ = {isa = PBXBuildFile; fileRef = 7315E41F164452C900FA05AA /* loadingIndcationView.png */; };
 		734A32A11639938800848109 /* flightSheetDefaultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 734A32A01639938800848109 /* flightSheetDefaultCell.m */; };
 		739C4E2615907113008D91FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739C4E2515907113008D91FB /* UIKit.framework */; };
 		739C4E2815907113008D91FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739C4E2715907113008D91FB /* Foundation.framework */; };
@@ -64,8 +71,6 @@
 		7315E3C3164413BF00FA05AA /* flightstatus-departing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flightstatus-departing.png"; sourceTree = "<group>"; };
 		7315E3C4164413BF00FA05AA /* flightstatus-inflight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flightstatus-inflight.png"; sourceTree = "<group>"; };
 		7315E3C5164413BF00FA05AA /* homeScreen-defaultCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homeScreen-defaultCell.png"; sourceTree = "<group>"; };
-		7315E3C6164413BF00FA05AA /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
-		7315E3C7164413BF00FA05AA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		7315E3C8164413BF00FA05AA /* tabbar-arrival.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-arrival.png"; sourceTree = "<group>"; };
 		7315E3C9164413BF00FA05AA /* tabbar-departuer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-departuer.png"; sourceTree = "<group>"; };
 		7315E3CB164413BF00FA05AA /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
@@ -75,15 +80,24 @@
 		7315E3CF164413BF00FA05AA /* flightstatus-departing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flightstatus-departing@2x.png"; sourceTree = "<group>"; };
 		7315E3D0164413BF00FA05AA /* flightstatus-inflight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flightstatus-inflight@2x.png"; sourceTree = "<group>"; };
 		7315E3D1164413BF00FA05AA /* homeScreen-defaultCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homeScreen-defaultCell@2x.png"; sourceTree = "<group>"; };
-		7315E3D2164413BF00FA05AA /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
-		7315E3D3164413BF00FA05AA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		7315E3D4164413BF00FA05AA /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		7315E3D5164413BF00FA05AA /* tabbar-arrival@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-arrival@2x.png"; sourceTree = "<group>"; };
 		7315E3D6164413BF00FA05AA /* tabbar-departuer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-departuer@2x.png"; sourceTree = "<group>"; };
 		7315E3F9164417CA00FA05AA /* background-downtown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-downtown@2x.png"; sourceTree = "<group>"; };
 		7315E3FB164417D800FA05AA /* background-downtown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-downtown.png"; sourceTree = "<group>"; };
 		7315E40016441B2500FA05AA /* background-downtown-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-downtown-568h@2x.png"; sourceTree = "<group>"; };
 		7315E40116441B2500FA05AA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7315E40516443BBB00FA05AA /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		7315E40616443BBB00FA05AA /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		7315E40716443BBB00FA05AA /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		7315E40816443BBB00FA05AA /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		7315E40916443BBB00FA05AA /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		7315E40A16443BBB00FA05AA /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		7315E40B16443BBB00FA05AA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		7315E40C16443BBB00FA05AA /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		7315E40D16443BBB00FA05AA /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		7315E40E16443BBB00FA05AA /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		7315E41D164452BF00FA05AA /* loadingIndcationView@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadingIndcationView@2x.png"; sourceTree = "<group>"; };
+		7315E41F164452C900FA05AA /* loadingIndcationView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingIndcationView.png; sourceTree = "<group>"; };
 		734A329F1639938800848109 /* flightSheetDefaultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flightSheetDefaultCell.h; sourceTree = "<group>"; };
 		734A32A01639938800848109 /* flightSheetDefaultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = flightSheetDefaultCell.m; sourceTree = "<group>"; };
 		739C4E2115907113008D91FB /* HECA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HECA.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +132,7 @@
 		7315E3BD164413BF00FA05AA /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				7315E40416443BBB00FA05AA /* icons */,
 				7315E3BE164413BF00FA05AA /* legacy */,
 				7315E3CA164413BF00FA05AA /* retina */,
 				7315E3FF16441B2500FA05AA /* retina-568h */,
@@ -136,10 +151,9 @@
 				7315E3C3164413BF00FA05AA /* flightstatus-departing.png */,
 				7315E3C4164413BF00FA05AA /* flightstatus-inflight.png */,
 				7315E3C5164413BF00FA05AA /* homeScreen-defaultCell.png */,
-				7315E3C6164413BF00FA05AA /* Icon-Small.png */,
-				7315E3C7164413BF00FA05AA /* Icon.png */,
 				7315E3C8164413BF00FA05AA /* tabbar-arrival.png */,
 				7315E3C9164413BF00FA05AA /* tabbar-departuer.png */,
+				7315E41F164452C900FA05AA /* loadingIndcationView.png */,
 			);
 			path = legacy;
 			sourceTree = "<group>";
@@ -155,11 +169,9 @@
 				7315E3CF164413BF00FA05AA /* flightstatus-departing@2x.png */,
 				7315E3D0164413BF00FA05AA /* flightstatus-inflight@2x.png */,
 				7315E3D1164413BF00FA05AA /* homeScreen-defaultCell@2x.png */,
-				7315E3D2164413BF00FA05AA /* Icon-Small@2x.png */,
-				7315E3D3164413BF00FA05AA /* Icon@2x.png */,
-				7315E3D4164413BF00FA05AA /* iTunesArtwork@2x.png */,
 				7315E3D5164413BF00FA05AA /* tabbar-arrival@2x.png */,
 				7315E3D6164413BF00FA05AA /* tabbar-departuer@2x.png */,
+				7315E41D164452BF00FA05AA /* loadingIndcationView@2x.png */,
 			);
 			path = retina;
 			sourceTree = "<group>";
@@ -171,6 +183,23 @@
 				7315E40116441B2500FA05AA /* Default-568h@2x.png */,
 			);
 			path = "retina-568h";
+			sourceTree = "<group>";
+		};
+		7315E40416443BBB00FA05AA /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				7315E40516443BBB00FA05AA /* Icon-72.png */,
+				7315E40616443BBB00FA05AA /* Icon-72@2x.png */,
+				7315E40716443BBB00FA05AA /* Icon-Small-50.png */,
+				7315E40816443BBB00FA05AA /* Icon-Small-50@2x.png */,
+				7315E40916443BBB00FA05AA /* Icon-Small.png */,
+				7315E40A16443BBB00FA05AA /* Icon-Small@2x.png */,
+				7315E40B16443BBB00FA05AA /* Icon.png */,
+				7315E40C16443BBB00FA05AA /* Icon@2x.png */,
+				7315E40D16443BBB00FA05AA /* iTunesArtwork */,
+				7315E40E16443BBB00FA05AA /* iTunesArtwork@2x.png */,
+			);
+			path = icons;
 			sourceTree = "<group>";
 		};
 		739C4E1615907111008D91FB = {
@@ -303,8 +332,6 @@
 				7315E3DB164413BF00FA05AA /* flightstatus-departing.png in Resources */,
 				7315E3DC164413BF00FA05AA /* flightstatus-inflight.png in Resources */,
 				7315E3DD164413BF00FA05AA /* homeScreen-defaultCell.png in Resources */,
-				7315E3DE164413BF00FA05AA /* Icon-Small.png in Resources */,
-				7315E3DF164413BF00FA05AA /* Icon.png in Resources */,
 				7315E3E0164413BF00FA05AA /* tabbar-arrival.png in Resources */,
 				7315E3E1164413BF00FA05AA /* tabbar-departuer.png in Resources */,
 				7315E3E2164413BF00FA05AA /* background@2x.png in Resources */,
@@ -314,15 +341,24 @@
 				7315E3E6164413BF00FA05AA /* flightstatus-departing@2x.png in Resources */,
 				7315E3E7164413BF00FA05AA /* flightstatus-inflight@2x.png in Resources */,
 				7315E3E8164413BF00FA05AA /* homeScreen-defaultCell@2x.png in Resources */,
-				7315E3E9164413BF00FA05AA /* Icon-Small@2x.png in Resources */,
-				7315E3EA164413BF00FA05AA /* Icon@2x.png in Resources */,
-				7315E3EB164413BF00FA05AA /* iTunesArtwork@2x.png in Resources */,
 				7315E3EC164413BF00FA05AA /* tabbar-arrival@2x.png in Resources */,
 				7315E3ED164413BF00FA05AA /* tabbar-departuer@2x.png in Resources */,
 				7315E3FA164417CA00FA05AA /* background-downtown@2x.png in Resources */,
 				7315E3FC164417D800FA05AA /* background-downtown.png in Resources */,
 				7315E40216441B2500FA05AA /* background-downtown-568h@2x.png in Resources */,
 				7315E40316441B2500FA05AA /* Default-568h@2x.png in Resources */,
+				7315E40F16443BBB00FA05AA /* Icon-72.png in Resources */,
+				7315E41016443BBB00FA05AA /* Icon-72@2x.png in Resources */,
+				7315E41116443BBB00FA05AA /* Icon-Small-50.png in Resources */,
+				7315E41216443BBB00FA05AA /* Icon-Small-50@2x.png in Resources */,
+				7315E41316443BBB00FA05AA /* Icon-Small.png in Resources */,
+				7315E41416443BBB00FA05AA /* Icon-Small@2x.png in Resources */,
+				7315E41516443BBB00FA05AA /* Icon.png in Resources */,
+				7315E41616443BBB00FA05AA /* Icon@2x.png in Resources */,
+				7315E41716443BBB00FA05AA /* iTunesArtwork in Resources */,
+				7315E41816443BBB00FA05AA /* iTunesArtwork@2x.png in Resources */,
+				7315E41E164452BF00FA05AA /* loadingIndcationView@2x.png in Resources */,
+				7315E420164452C900FA05AA /* loadingIndcationView.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
